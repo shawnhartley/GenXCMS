@@ -42,6 +42,17 @@ The MVC architecture was a deliberate design choice, separating concerns cleanly
    - **Step 5** — Launch the management center
 4. Log in to the management center and configure your site settings
 
+## Default Login
+
+After installation, log in to the management center with the following credentials:
+
+| Field | Value |
+|-------|-------|
+| Username | `admin@example.org` |
+| Password | `admin` |
+
+> ⚠️ **Change the default password immediately after your first login.**
+
 ## History
 
 - Developed at Corporate 3 Design, Omaha, Nebraska
