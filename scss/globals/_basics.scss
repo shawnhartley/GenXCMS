@@ -1,0 +1,55 @@
+/*  ---------------------------------------------------
+	:: Page / General
+	------------------------------------------------ */
+/*
+	html,
+	body {
+		font-size: 100%; 
+	}
+*/
+	html { 
+		width: 100%; 
+		height: 100%; 
+		overflow-y: scroll;
+	}
+	body {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		font-family: $mainFont;
+		background: white;
+		color: $darkGray; 
+		font-weight: normal;
+		font-style: normal; 
+		line-height: 1;
+		background: white;
+		-webkit-font-smoothing: antialiased; /* removes fake bolding on chrome/safari */
+	}  
+	 
+	div { position:relative; }
+	
+	.off-canvas-content{
+		display: flex;
+		flex-direction: column;
+		flex-flow: column;
+		min-height: 100vh;
+	}
+	
+	*:focus{
+		outline: none;
+	}
+	
+	svg{
+		path{
+			fill: inherit;
+		}
+	}
+	
+/*  -------------------------------------------------
+	:: Debug Styling
+	--------------------------------------------- */
+	.cfdump_struct{ margin-bottom:1px; }
+	table.cfdump_struct tbody tr th.struct,
+	table.cfdump_struct tr th,  table.cfdump_struct tr td{ font-size:10px; }

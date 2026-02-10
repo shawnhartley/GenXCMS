@@ -1,0 +1,29 @@
+// Since this isn't technically an element so much a container for other elements, keep this styling light as possible
+
+/*  ---------------------------------------------------
+	:: Content
+	------------------------------------------------ */
+	#content {
+		flex: 2 2 auto;
+		padding: 15px 0;
+		
+		.edit{ display: none; text-decoration: none}
+		
+		/* ---- Medium Width screens and up ---- */
+		@media only screen and (min-width: #{map-get($breakpoints, medium)} ) {
+			
+			padding:40px 0;
+			
+			.edit{ display: inline-block;}
+			
+		}
+		
+		/* ---- Large Width screens and up ---- */
+		@media only screen and (min-width: #{map-get($breakpoints, large)}) {
+			
+		}
+		
+		
+	}
+
+

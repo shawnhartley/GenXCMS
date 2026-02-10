@@ -1,0 +1,53 @@
+/*  ---------------------------------------------------
+	:: Portfolio elements
+	------------------------------------------------ */	
+	
+#phonePortfolioNav{
+	list-style: none;
+	margin: 0 0 30px 0;
+	li {
+		&.active {
+			a {
+				color: $mainColor
+			}
+			li {
+				margin-bottom: 8px;
+				a {
+					color: $darkGray;
+					font-size: 16px;
+				}
+				&.active a {
+					color: $mainColor;
+				}
+			}
+		}
+	}
+	a {
+		text-decoration: none;
+		font-size: 20px;
+		color: $darkGray;
+	}
+	ul {
+		list-style: none;
+		margin-top: 6px;
+		margin-left: 16px;
+	}
+}
+
+.projectItem {
+	margin-bottom: 20px;
+}
+p.caption {
+	margin-top: -10px;
+	margin-bottom: 30px;
+}
+
+/* ---- Medium Width screens and up ---- */
+@media only screen and (min-width: #{map-get($breakpoints, medium)} ) {
+	
+}
+
+/* ---- Large Width screens and up ---- */
+@media only screen and (min-width: #{map-get($breakpoints, large)}) {
+	
+}

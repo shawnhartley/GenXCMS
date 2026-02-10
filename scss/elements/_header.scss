@@ -1,0 +1,115 @@
+/*  ---------------------------------------------------
+	:: Header
+	------------------------------------------------ */
+
+header, #header{
+	
+	background: $light-gray;
+	border-bottom: 3px solid $mainColor;
+	padding: 5px 0;
+	
+	//Logo
+	
+	#logo{
+		li{ margin: 0 auto;}
+		svg{fill: $mainColor;}
+	}
+	
+	// Hamburger button to X
+	//variables are found in _variables.scss
+	
+	%hamburger-buns{
+	   display: block;
+	   position: relative;
+	   content: '';
+	   height: $hamburger-patty-thickness;
+	   background: $hamburger-patty-color;
+// 	   transition: top 0s 0.25s, transform 0s 0.25s;
+	}
+	
+	button.opener{
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: $opener-button-margin;
+	}
+	
+	button.hamburger{
+		display: block;
+		width: $hamburger-width;
+		height: $hamburger-height;
+		
+		span{
+			display: block;
+			height: $hamburger-patty-thickness;
+			width: 100%;
+			background: $hamburger-patty-color;
+// 			transition: transform 1s, background 0s 0.25s;
+			
+			&::before{
+				@extend %hamburger-buns;
+				top: -1 * (($hamburger-height - $hamburger-patty-thickness) / 2);
+			}
+			&::after{
+				@extend %hamburger-buns;
+				top: (($hamburger-height - $hamburger-patty-thickness) / 2 - $hamburger-patty-thickness);
+			}
+		}
+		
+		.is-off-canvas-open &{
+			span{
+				background: transparent;
+// 				transform: rotateY(180deg);
+				
+				&::before{
+					transform: rotate(-45deg);
+					top: 0;
+				}
+				&::after{
+					transform: rotate(45deg);
+					top: -1 * $hamburger-patty-thickness;
+				}
+			}
+		}
+		
+	} 
+	
+	//Main menu (by default, only visible for medium and up)	
+		
+	#mainnav li {
+		a {
+			text-decoration: none;
+			color: #222222;
+			font-size: 16px;
+			text-align:center; 
+			display:block;
+		}
+		&.active a,
+		&:hover a {
+			color:$mainColor;
+		}
+	}
+	
+	/* ---- Medium Width screens and up ---- */
+	@media only screen and (min-width: #{map-get($breakpoints, medium)} ) {
+		
+		display: block;
+		width: 100%;
+		padding: 20px 0;
+		
+		//Logo
+		
+		#logo{
+			li{ margin: initial;}
+		}
+		
+	}
+	
+	/* ---- Large Width screens and up ---- */
+	@media only screen and (min-width: #{map-get($breakpoints, large)}) {
+		
+	}
+	
+}
+	
+

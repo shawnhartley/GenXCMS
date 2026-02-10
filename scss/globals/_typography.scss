@@ -1,0 +1,358 @@
+/*  ---------------------------------------------------
+	:: _typography.scss
+	------------------------------------------------ */
+
+// default styling for main paragraph text.
+
+%main-paragraph{
+	font-family: inherit;
+	font-weight: normal;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: $darkGray;
+	margin-bottom: 1.25rem;
+	margin-top:0;
+}
+
+//default styling for headlines
+
+%main-headline{
+	font-family: $mainFont;
+	font-weight: normal;
+	font-style: normal;
+	color: $mainColor;
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	line-height: 1.25rem; 
+}
+
+	
+// 	This is the baseline font-size for mobile;
+
+html{
+	font-size: 14px;
+}
+
+	
+	hr {
+		display:block; 
+		float:none; 
+		clear:both; 
+		margin:2.25rem auto;
+		border: none; 
+		height:1px; 
+		padding:0;
+		background: $lightGray; 
+	}
+	
+	
+	/* Helpful Typography Defaults */
+	em, i {
+		font-style: italic;
+		line-height: inherit; 
+	}
+	
+	strong, b {
+		font-weight: bold;
+		line-height: inherit; 
+	}
+	
+	small {
+		font-size: 60%;
+		line-height: inherit; 
+	}	
+	
+	sup, sub { 
+		height: 0;
+		line-height: 1;
+		vertical-align: baseline;
+		position: relative;
+	}
+		sup { bottom: 1ex; }
+		sub { top: .5ex; }	
+	
+	
+	/* Images */
+	img { 
+		max-width: 100%;
+		height: auto; 
+		-ms-interpolation-mode: bicubic;
+		display: inline-block;
+		vertical-align: middle;
+		&[align=left], 
+		&[style*=left] { 
+			float:left; 
+			margin: 0 1rem 0.5rem 0;
+		}
+		&[align=right], 
+		&[style*=right] { 
+			float:right;
+			margin: 0 0 0.5rem 1rem;
+		}	
+	}
+
+
+	/* Lists */
+/*
+	ul, ol {
+		font-size: 16px;
+		line-height: 1.6;
+		margin-top:8px;
+		margin-bottom: 14px;
+		font-family: inherit;
+		li ul, li ol { 
+			margin-left: 26px;
+			font-size: 16px; 
+			margin-bottom:14px;
+		}
+	}
+		ul.square { list-style-type: square; }
+		ul.circle { list-style-type: circle; }
+		ul.disc   { list-style-type: disc; }
+		ul.no-bullet { list-style: none; }
+		ul.square, ul.circle, ul.disc {
+			margin-left:18px;
+			li ul { list-style:inherit; }
+		}	
+*/
+
+	/* Pagination */
+	ul.pagination {
+		display: block;
+		min-height: 1.5rem;
+		margin-left:-0.3125rem; 
+		li {
+			height: 1.5rem;
+			color: $darkGray;
+			font-size: 0.8125rem;
+			margin-left: 0.3125rem; 
+			float: left;
+			display: block;
+			/* Default Styling */
+			a {
+				display: block;
+				padding: 0.125rem 0.5rem 0.125rem;
+				color: $midGray;
+				background: none;
+				border-radius: 0.1875rem;
+				font-weight: normal;
+				font-size: 1rem;
+				line-height: inherit;
+				transition: background-color 300ms ease-out;
+				text-decoration: none;
+			}
+			&:hover a,
+			a:focus {
+				background: $lightGray;
+			}
+			/* Unavailable Styling */
+			&.unavailable {
+				a {
+					cursor: default;
+					color: $lightGray; 
+				}
+				&:hover a,
+				a:focus {
+					background: transparent; 
+				}
+			}
+			/* Current Styling */
+			&.current a {
+				background: $mainColor;
+				color: white;
+				font-weight: bold;
+				cursor: default;
+				&:hover,
+				&:focus {
+					background: $darkGray;
+				}
+			}
+		}
+	}
+		.pagination-centered { text-align: center; }
+		.pagination-centered ul.pagination li {
+			float: none;
+			display: inline-block; 
+		}
+	
+	
+	/* Tables! */
+	table {
+		background: white;
+		margin-bottom: 1.25rem;
+		border: solid 1px $lightGray;
+		table-layout: auto; 
+		caption {
+			background: transparent;
+			color: $darkGray;
+			font-size: 1rem;
+			font-weight: bold; 
+			margin-bottom: 0.375rem;
+		}
+		/* Table Head & Footer */
+		thead, tfoot { 
+			background: whitesmoke; 
+			tr th,
+			tr td {
+				padding: 0.5rem 0.5625rem 0.5625rem;
+				font-size: 0.8125rem;
+				font-weight: bold;
+				color: $darkGray; 
+				display: table-cell;
+				line-height: 1.125rem;
+			}
+		}
+		/* Normal TH and TDs */
+		tr th,
+		tr td {
+			padding: 0.5rem 0.5625rem;
+			font-size: 0.875rem;
+			color: $darkGray;
+			text-align: left; 
+			display: table-cell;
+			line-height: 1.125rem;
+		}
+		/* Style every-other child with different background */
+		tr.even, tr.alt, tr:nth-of-type(even) { background: #f9f9f9; }
+	}
+	
+	
+	// 	We NEVER use these, kept as legacy code
+	
+	/* Panels */
+/*
+	.panel {
+		border-style: solid;
+		border-width: 1px;
+		border-color: #d8d8d8;
+		margin-bottom: 1.125rem;
+		padding: 1.125rem;
+		background: #f2f2f2;
+		& > :first-child { margin-top: 0; }
+		&> :last-child { margin-bottom: 0; }
+	}
+*/
+
+	/* Blockquotes */
+	
+	blockquote {
+		background: $lightGray;
+		border-left: 1rem solid $mainColor;
+		margin: 1.5rem 0.0625rem;
+		padding: 0.5rem 1rem;
+		p {
+			margin:0.0625rem !important;
+			color:$darkGray;
+		}
+	}
+	
+	/* Address */
+	
+	address{
+		@extend %main-paragraph;
+		color: darken($mainColor, 25%);
+		font-weight: 600;
+	}
+	
+	/* Errors */
+	
+	.error{
+		color: map-get($C3D-foundation-palette, alert) !important;
+		font-weight: 600 !important;
+	}
+
+	
+	/* Links */
+	a { 
+		color: $mainColor; 
+		text-decoration:underline;
+		line-height: inherit; 
+		&:hover  { color: $mainColor; cursor: pointer; }
+		&:active { color: $mainColor; }
+		&:focus  { color: $mainColor; outline: none; }
+		img { border: none; }
+	}
+	
+		
+	/* Headlines */		
+	
+	h1 {
+		@extend %main-headline;
+		font-size: 2.25rem;
+		line-height: 2.5rem; 
+	}
+	h2 {
+		@extend %main-headline;
+		font-size: 1.625rem;
+		line-height: 1.875rem;
+	}
+	h3 {
+		@extend %main-headline;
+		font-size: 1.25rem;
+		line-height: 1.625rem; 
+	}
+	h4 { 
+		@extend %main-headline;
+		font-size: 1.125rem; 
+		line-height: 1.25rem; 
+	}
+	h5 { 
+		@extend %main-headline;
+		font-size: 1rem; 
+		line-height: 1.125rem;
+	}
+	h6 { 
+		@extend %main-headline;
+		font-size: 1rem; 
+		line-height: 1.125rem; 
+	}
+
+	
+/* ----- Copy Text ----- */
+
+	#copy{
+		
+		/* Selectors for when you highlight text */
+		::selection { background: $mainColor; color:white;} move into copy section
+		::-moz-selection { background: $mainColor; color:white; }
+		
+		
+		/* Paragraphs */
+		p{
+			@extend %main-paragraph;
+		}
+		
+		/* Lists */
+		// List styling is in #copy because lists are often used as structural elements elsewhere.
+		
+		ul, ol {
+			margin: 0.5rem 0 0.875rem 1.875rem;
+			padding-left: 0;
+		}
+			li {
+				@extend %main-paragraph;
+				margin-bottom: 0.375rem;
+				line-height: 1.25;
+			}
+		
+	}
+		
+
+
+/* ---- Medium Width screens and up ---- */
+	@media only screen and (min-width: #{map-get($breakpoints, medium)} ) {
+		
+		
+		//Baseline font-size for tablet/desktop
+		
+		html{font-size: 16px;}
+		
+	}
+	
+	/* ---- Large Width screens and up ---- */
+	@media only screen and (min-width: #{map-get($breakpoints, large)}) {
+		
+	}
+	
+	
+	

@@ -1,0 +1,392 @@
+/* CSS Document */
+
+/*==================================*/
+/*    Author: Chris Johnson         */
+/*    Company: Corporate 3 Design   */
+/*    Date: October 10, 2008         */
+/*==================================*/
+
+/*==================================*/
+/*------------- Sidebar ------------*/
+/*==================================*/
+
+#content_wrapper ul#sidebar {
+	width: 159px;
+	padding: 0 0 0 24px;
+	float: left;
+	list-style: none;
+	color: #a68462;
+	font-family: "Georgia", Times New Roman, Times, serif;
+	font-size: .8em;
+}
+
+#content_wrapper ul#sidebar li {
+	width: 158px;
+	border: 1px solid #a68462;
+	border-width: 0 0 1px 0;
+}
+
+#content_wrapper ul#sidebar a {
+	color: #a68462;
+	display: block;
+	width: 128px;
+	padding: 10px 15px 10px 15px;
+	text-decoration: none;
+	line-height: 120%;
+	background: url(../images/main/subnav_bg.gif) 0px -100px repeat-x;
+}
+
+#content_wrapper ul#sidebar a:hover {
+	background: url(../images/main/subnav_bg.gif) 0px 0px repeat-x #900722;
+	color: #fff;
+}
+
+#content_wrapper ul#sidebar li.active a {
+	background: url(../images/main/subnav_bg.gif) 0px 0px repeat-x #900722;
+	color: #fff;
+}
+
+#content_wrapper ul#sidebar li .date {
+	font-size: .9em;
+}
+
+/* 2nd level subnav */
+
+#content_wrapper ul#sidebar li.active ul {
+	width: 158px;
+}
+
+#content_wrapper ul#sidebar li.active li {
+	border: 1px solid #856f2d;
+	border-width: 1px 0 0 1px;
+	width: 157px;
+	list-style: none;
+}
+
+#content_wrapper ul#sidebar li.active li a{
+	color: #fff;
+	padding: 7px 15px 7px 15px;
+	background: url(../images/main/subnav_2ndlevel_bg.gif) 0px 0px repeat-x #907b3b;
+	width: 127px;
+	cursor:pointer;
+}
+
+#content_wrapper ul#sidebar li.active li.active a{
+	background: url(../images/main/subnav_2ndlevel_bg.gif) 0px -124px repeat-x #aa9351;
+}
+
+#content_wrapper ul#sidebar li.active li a:hover{
+	background: url(../images/main/subnav_2ndlevel_bg.gif) 0px -124px repeat-x #aa9351;
+}
+
+/* 3rd level subnav */
+
+#content_wrapper ul#sidebar li.active li.active ul {
+	width: 157px;
+	background: url(../images/main/subnav_3rdlevel_bg.gif) 0px 0px no-repeat #a4a4a4;
+	border: 1px solid #856f2d;
+	border-width: 1px 0 0 0;
+	padding: 4px 0 4px 0;
+}
+
+#content_wrapper ul#sidebar li.active li.active li {
+	border: none;
+	width: 157px;
+	list-style: none;
+}
+
+#content_wrapper ul#sidebar li.active li.active li a {
+	background: none;
+	padding: 5px 15px 5px 15px;
+}
+
+#content_wrapper ul#sidebar li.active li.active li a:hover {
+	background: none;
+	color: #f9f2d8;
+	text-decoration: underline;
+}
+
+#content_wrapper ul#sidebar li.active li.active li.active a {
+	background: none;
+	color: #f9f2d8;
+	text-decoration: underline;
+}
+
+/*==================================*/
+/*------------- Content ------------*/
+/*==================================*/
+
+#content_wrapper {
+	padding: 10px 17px 10px 17px;
+}
+
+#content_wrapper #verticalline {
+	width: 900px;
+	background: url(../images/main/verticalline.gif) top left repeat-y;
+	margin: 15px 0 15px 0;
+}
+
+#content_wrapper #content {
+	width: 661px;
+	float: left;
+	padding: 0 28px 0 28px;
+	font-size: .75em;
+}
+
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+	font-family: "Georgia", Times New Roman, Times, serif;
+	font-weight: normal;
+	line-height: 150%;
+}
+
+#content a, #content a:visited {
+	color: #9e8b4e;
+}
+
+#content a:hover {
+	color: #872434;
+	text-decoration: underline;
+}
+
+#content h1{
+	color: #cc0a2f;
+	font-size: 2em;
+}
+
+#content h2 {
+	color: #a68462;
+	font-size: 1.6em;
+	padding: 0 0 15px 0;
+}
+
+#content h3 {
+	color: #a68462;
+	font-size: 1.4em;
+}
+
+#content h4 {
+	color: #cc0a2f;
+	font-size: 1.4em;
+}
+
+#content h4 a, #content h4 a:visited {
+	color: #a68462;
+	text-decoration: none;
+}
+
+#content h4 a:hover {
+	color: #872434;
+	text-decoration: underline;
+}
+
+#content h5 {
+	color: #a68462;
+	font-size: 1.4em;
+}
+
+#content p {
+	padding: 0 0 15px 0;
+}
+
+#content img {
+	margin: 10px;
+}
+
+#content .date {
+	color: #a68462;
+	font-size: 1em;
+	font-family: "Georgia", Times New Roman, Times, serif;
+}
+
+#content ul {
+	padding: 0 0 15px 0;
+}
+
+#content ul li{
+	list-style: none;
+	background: url(../images/main/bullet.gif) 0 50% no-repeat;
+	padding: 0 0 0 13px;
+}
+
+#content ol {
+	font-family:"Georgia", Times New Roman, Times, serif;
+	font-weight: bold;
+	font-size: 1em;
+	color: #a68462;
+	margin: 0 0 0 15px;
+}
+
+#content ol p {
+	color: #000;
+	font-weight: normal;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/*=======================================*/
+/*------------- Photo Gallery -----------*/
+/*=======================================*/
+
+#content .gallery ul {
+	list-style: none;
+	padding: 0;
+}
+
+#content .gallery ul li {
+	list-style: none;
+	background: none;
+	padding: 0;
+}
+
+#content .gallery ul img {
+	margin: 0;
+}
+
+#content .galleria li{
+	display:block;
+	width:80px;
+	height:80px;
+	overflow:hidden;
+	float:left;
+	margin:0;
+}
+
+#content .galleria li a{
+	display:none;
+}
+
+#content .galleria li div{
+	position:absolute;
+	display:none;
+	top:0;
+	left:0;
+}
+
+#content .galleria li div img{
+	cursor:pointer
+}
+#content .galleria li.active div img,.galleria li.active div{
+	display:block;
+}
+
+#content .galleria li img.thumb{
+	cursor:pointer;
+	top:auto;
+	left:auto;
+	display:block;
+	width:auto;
+	height:auto;
+}
+
+#content .galleria li .caption{
+	display:block;
+}
+
+* html .galleria li div span{width:400px} /* MSIE bug */
+
+#content .caption{
+	font-family: "Georgia", Times New Roman, Times, serif; 
+	color:#a68462;
+}
+
+#content .gallery{
+	position:relative; 
+	width: 660px;
+}
+
+#content .photo_gallery{
+	width:660px;
+	margin:0 auto;
+}
+
+#content .photo_gallery li{
+	width:69px;
+	height:50px; 
+	margin: 0 2px;
+	background:#a4a4a4;
+	border: none;
+}
+
+#content .photo_gallery li div{
+	left:0px
+}
+
+#content #main_image{
+	height:438px;
+	width:660px;
+	background:#fff; 
+	margin: 0 0 15px 0;
+}
+
+#content #main_image img{
+	margin: 0 0 10px 0;
+}
+
+#content .nav{
+	padding-top:15px;
+	clear:both;
+	text-transform:uppercase;
+}
+
+/*==================================*/
+/*---- GOOGLE SEARCH RESULTS -------*/
+/*==================================*/
+
+#content #searchresults h3 a{
+	color: #a68462;
+	font-weight:normal;
+	font-size: .9em;
+}
+
+
+#content #searchresults h3 a:hover {
+	color: #8f0621;
+}
+
+#content #searchresults h3 a b{
+	font-weight: bold;
+}
+
+#content #searchresults p b{
+	font-weight: bold;
+}
+
+#content #searchresults #resultinfo{
+	color: #000;
+	font-weight:normal;
+	background: url(../images/home/dottedline.gif) bottom left repeat-x;
+	margin: 0 0 15px 0;
+	padding: 0 0 10px 0;
+}
+
+#content .pages a, .pages span {
+	display: block;
+	float: left;
+	padding: .2em .5em .2em .5em;
+	margin: 0 .1em 0 0;
+	border: 1px solid #fff;
+	background-color: #ffffff;
+	text-decoration:none;
+	color: #a68462;
+}
+
+#content .pages span.activepage {
+	display: block;
+	float: left;
+	padding: .2em .5em .2em .5em;
+	margin: 0 .1em 0 0;
+	border: 1px solid #8f0621;
+	color: #fff;
+	background: url(../images/main/subnav_bg.gif) 0px 0px repeat-x #900722;
+}
+
+#content .pages a {
+	border: 1px solid #a68462;
+	text-decoration: none;
+}
+
+#content .pages a:hover{
+	border: 1px solid #8f0621;
+	background: url(../images/main/subnav_bg.gif) 0px 0px repeat-x #900722;
+	color: #fff;
+}

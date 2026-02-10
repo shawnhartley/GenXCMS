@@ -1,0 +1,37 @@
+/*  ---------------------------------------------------
+	:: Off-Canvas Nav
+	------------------------------------------------ */
+
+aside.off-canvas{
+	
+	height: 100%;
+	
+	.is-drilldown{
+		min-height: 100% !important;
+	}
+
+	
+	a{
+		font-size: 1.25rem;
+		text-decoration: none;
+		color: $dark-gray;
+	}
+	
+	ul ul{
+		// padding-left: 1rem; //good for non-drill-down nav
+	}
+	
+	.is-drilldown-submenu{
+		a{
+			color: $white;
+		}
+	}
+	
+	
+	// By default, this element is only used in Mobile view. However, if that is not the case, you may need these breakpoints.
+	///* ---- Medium Width screens and up ---- */
+	//@media only screen and (min-width: #{map-get($breakpoints, medium)} ) {}
+	
+	/* ---- Large Width screens and up ---- */
+	//@media only screen and (min-width: #{map-get($breakpoints, large)}) {}
+}

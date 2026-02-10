@@ -1,0 +1,51 @@
+@charset 'utf-8';
+
+@import 'globals/fonts'; // load webfonts first
+
+@import 'globals/variables'; // This file is first so that variables can be used in foundation settings
+
+/* ----- Frameworks -----*/
+
+@import 'globals/normalize.scss'; // legacy file, may need re-work
+
+/* foundation */
+@import 'foundation/settings/settings';
+@import 'foundation/foundation';
+
+// All of foundation
+@include foundation-everything(true);
+
+@import 'motion-ui/motion-ui';
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+/* ----- Post-Foundation Site Globals -----*/
+
+/* View Sizes */
+
+@import 'globals/helpers'; // I reccomend any mix-ins go in helpers, legacy media-breakpoints are in here too.
+@import 'globals/ie8-and-less'; // legacy file, may need re-work
+@import 'globals/basics';	// html, body, debug, etc
+@import 'globals/typography'; // TO-DO: overhaul this file entirely
+@import 'globals/forms';	
+
+/* ----- Site Elements -----*/
+// When in doubt, add a new partial to this list rather than add new elements to other files.
+
+@import 'elements/off-canvas'; //mobile navigation
+@import 'elements/promo'; // hero/carousel
+@import 'elements/header'; // mainnav is currently in this file
+@import 'elements/content';
+@import 'elements/sidebar'; // sidenav is currently in this file
+@import 'elements/footer';
+
+/* ----- Optional includes -----*/
+
+@import 'optional/print'; // legacy file, may need re-work
+@import 'optional/flexslider'; // TO-DO: rework this file to use foundation breakpoints
+@import 'optional/portfolio';
+@import 'optional/datepicker'; // legacy file, may need re-work
+@import 'optional/landings'; // TO-DO: rework this file to use foundation breakpoints
+@import 'optional/locations'; // TO-DO: rework this file to use foundation breakpoints
+@import 'optional/news'; // TO-DO: rework this file to use foundation breakpoints

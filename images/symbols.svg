@@ -1,0 +1,22 @@
+<!--- SVG Library --->
+<!--- Whenever possible, SVGs used in the site should be added to this files as symbols. Save the individual files to /images/raw-svgs/ as a backup --->
+<!--- IMPORTANT: TRIM THIS FILE TO REMOVE ANY SVGS NOT BEING USED --->
+<!--- It is reccomended you use SVGO to optimize the file first (google SVGOMG)--->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" style="display:none">
+	
+	<symbol id="C3D_logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53.8 53.8"><defs><style></style></defs><title>C3D_Logo</title><path class="c3d_logo_path" d="M26.39 0a26.77 26.77 0 0 0-11.67 2.91l3.52 5.36a20.54 20.54 0 0 1 28.1 25.24L34.25 15.1h-7.63l19.85 30.22A26.89 26.89 0 0 0 26.39 0zm11.88 38.78L22.73 15.12h-7.62l15.53 23.66h7.63zm-10.98 8.65a20.54 20.54 0 0 1-20-26.66l11.83 18h7.63l-19.71-30a26.89 26.89 0 0 0 31.67 42.3l-3.53-5.37a20.47 20.47 0 0 1-7.89 1.73z"/></symbol>
+	
+	<symbol id="left-arrow" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.66 72.64"><defs><style>.left-arrow{fill:#fff;}</style></defs><title>left-arrow</title><path class="left-arrow" d="M37.3 72.64a2.35 2.35 0 0 1-1.67-.69L0 36.32 35.63.69A2.362 2.362 0 0 1 39 4L6.71 36.29 39 68.61a2.36 2.36 0 0 1-1.7 4.03z"/></symbol>
+	
+	<svg id="right-arrow" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.66 72.64"><defs><style>.right-arrow{fill:#fff;}</style></defs><title>right-arrow</title><path class="right-arrow" d="M2.36 72.64a2.35 2.35 0 0 0 1.67-.69l35.63-35.63L4.03.69A2.362 2.362 0 1 0 .66 4l32.29 32.29L.66 68.61a2.36 2.36 0 0 0 1.7 4.03z"/></svg>
+	
+	<symbol id="Pinterest" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.2 75.2"><title>pinterest</title><path class="icon" d="M71.19 0H-.01v75.2h75.2V0h-4zM42.4 51.48c-3.87 0-7.5-2.09-8.75-4.46 0 0-2.08 8.25-2.52 9.84-1.55 5.62-6.11 11.25-6.46 11.72a.48.48 0 0 1-.85-.21c-.1-.72-1.26-7.81.11-13.6l4.6-19.51a13.78 13.78 0 0 1-1.14-5.67c0-5.3 3.07-9.27 6.9-9.27 3.26 0 4.83 2.45 4.83 5.38 0 3.27-2.08 8.17-3.16 12.7a5.54 5.54 0 0 0 5.65 6.9c6.78 0 11.35-8.71 11.35-19 0-7.84-5.28-13.72-14.9-13.72-10.85 0-17.62 8.1-17.62 17.14a10.32 10.32 0 0 0 2.36 7 1.74 1.74 0 0 1 .52 2c-.18.66-.57 2.25-.73 2.87a1.23 1.23 0 0 1-1.79.9c-5-2-7.33-7.52-7.33-13.68 0-10.17 8.58-22.36 25.58-22.36 13.67 0 22.66 9.89 22.66 20.51.01 14.04-7.8 24.52-19.3 24.52z"/></symbol>
+
+	<symbol id="Facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.3 75.3"><title>facebook</title><path class="icon" d="M71.18 0H0v75.3h40.18V46.14h-9.81V34.77h9.81v-8.38c0-9.72 5.94-15 14.62-15a79.31 79.31 0 0 1 8.77.45V22h-6c-4.72 0-5.63 2.23-5.63 5.53v7.25h11.24l-1.47 11.36h-9.79V75.3h23.35V0h-4.09z"/></symbol>
+
+	<symbol id="GooglePlus" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.41 60.9"><defs></defs><title>google_plus</title><path class="icon" d="M9.07 31.41c3.53 2.47 9.11 1.91 11.54-1.77 2.61-4 1.41-9.47-.42-13.52-1.73-3.83-5-7.6-9.59-7.23a8.36 8.36 0 0 0-5.59 2.85c-1.43 1.71-1.69 4-1.73 6.12-.1 4.93 1.63 10.55 5.79 13.53 1.39 1.01-1.34-.93 0 .02zM7.3 45.94c2.26-.27 4.52-.18 6.79-.29a12.07 12.07 0 0 1-2.52-4.53 8.65 8.65 0 0 1 .72-4.92A16 16 0 0 1 .01 33.05v15.3a14.8 14.8 0 0 1 7.29-2.42zm54.08-29v-17H0v11.19c4.54-4.58 11.21-5.4 17.32-5.4h16.9l-2.18 1.74-1.64 1.32a6 6 0 0 1-1.08.86 7 7 0 0 1-2.36.06h-3.04a14.86 14.86 0 0 1 5.33 11.77c-.09 4.75-2.61 8.29-6.16 11.22-1.62 1.33-3.49 3-3.4 5.24.07 1.78 1.37 2.87 2.68 3.88 2.25 1.74 4.58 3.43 6.66 5.38a17.54 17.54 0 0 1 4.28 5.77 11.9 11.9 0 0 1 .3 7.87h27.85v-39.3H50.25V32.8h-4.79V21.6H34.31v-4.63h11.15V5.74h4.83v11.19h11.12zm-36.1 37.2c-2.12-1.78-4.46-3.27-6.71-4.88a4.58 4.58 0 0 0-2.42-1.22 13.71 13.71 0 0 0-1.59 0c-5.07.23-11.11 1-14.56 5.2v7.59h28.38c.82-2.5-1.35-5.2-3.11-6.7z"/></symbol>
+
+	<symbol id="LinkedIn" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75"><title>linkedin</title><path class="icon" d="M65.16 0H0v75h75V0h-9.84zM22.24 63.91H11.11V28.12h11.13v35.79zm-5.56-40.68a6.45 6.45 0 1 1 6.45-6.45 6.45 6.45 0 0 1-6.45 6.45zm47.23 40.68H52.79v-17.4c0-4.15-.08-9.49-5.78-9.49s-6.67 4.52-6.67 9.19v17.71H29.22v-35.8h10.67V33h.15a11.69 11.69 0 0 1 10.53-5.78c11.26 0 13.34 7.41 13.34 17.05V63.9z"/></symbol>
+	
+</svg>

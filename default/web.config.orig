@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <directoryBrowse enabled="false" />
+        <defaultDocument>
+            <files>
+                <clear />
+                <add value="Default.aspx" />
+                <add value="index.html" />
+                <add value="index.cfm" />
+            </files>
+        </defaultDocument>
+		<httpErrors errorMode="Detailed" />
+        <rewrite>
+            <rules>
+                <rule name="stop wp-login errors" stopProcessing="true">
+                    <match url="wp-login" ignoreCase="false" />
+                    <action type="Redirect" url="/" appendQueryString="false" redirectType="Permanent" />
+                </rule>
+                <rule name="Ignore Existing files and folders" stopProcessing="true">
+                    <match url="(.*)" ignoreCase="false" />
+                    <conditions logicalGrouping="MatchAny">
+                        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" ignoreCase="false" />
+                        <add input="{REQUEST_FILENAME}" matchType="IsFile" ignoreCase="false" />
+                    </conditions>
+                    <action type="None" />
+                </rule>
+                <rule name="Managementcenter Full" stopProcessing="true">
+                    <match url="^managementcenter/([\w-_+]+)/([\w-_+]+)/([\w-_+]+)" ignoreCase="false" />
+                    <action type="Rewrite" url="/managementcenter/index.cfm?event={R:1}&amp;action={R:2}&amp;id={R:3}" appendQueryString="true" />
+                </rule>
+                <rule name="Managementcenter Action" stopProcessing="true">
+                    <match url="^managementcenter/([\w-_+]+)/([\w-_+]+)" ignoreCase="false" />
+                    <action type="Rewrite" url="/managementcenter/index.cfm?event={R:1}&amp;action={R:2}" appendQueryString="true" />
+                </rule>
+                <rule name="Managementcenter Event" stopProcessing="true">
+                    <match url="^managementcenter/([\w-_+]+)" ignoreCase="false" />
+                    <action type="Rewrite" url="/managementcenter/index.cfm?event={R:1}" appendQueryString="true" />
+                </rule>
+                <rule name="Frontend Controller" stopProcessing="true">
+                    <match url="^([\w-_/+]+)" ignoreCase="false" />
+                    <action type="Rewrite" url="/index.cfm?event={R:1}" appendQueryString="true" />
+                </rule>
+                <rule name="Landing Controller" stopProcessing="true">
+                    <match url="^landing/([^/]+)?$" ignoreCase="false" />
+                    <action type="Rewrite" url="/landings.cfm?idlanding={R:1}" appendQueryString="true" />
+                </rule>					
+            </rules>
+        </rewrite>
+		<httpProtocol>
+			<customHeaders>
+				<remove name="X-Powered-By" />
+			</customHeaders>
+		</httpProtocol>
+
+    </system.webServer>
+</configuration>

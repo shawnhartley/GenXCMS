@@ -1,0 +1,23 @@
+// Media breakpoints are now found in foundation/_settings.scss and can be accessed using map-get($breakpoints, size), these are legacy fallbacks
+// These are here b/c they can't go in variables (before settings) and they don't seem to justify their own file.
+
+$MediumWidth: map-get($breakpoints, medium);
+$LargeWidth: map-get($breakpoints, large);
+
+
+/*  ---------------------------------------------------
+	:: Helper Classes
+	------------------------------------------------ */
+	.center {margin: 0 auto; text-align: center; display: block;}
+	
+	.left     { float: left !important; }
+	.right    { float: right !important; }
+	.hide     { display: none; }
+	
+	.error { color: $red; }
+	.clear { 
+		clear: both !important;
+		height:auto !important;
+		width: auto !important;
+		float: none !important; 
+	}

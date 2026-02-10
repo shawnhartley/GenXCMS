@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+
+$Rev:: 910          $:  Revision of last commit
+$Author:: lane      $:  Author of last commit
+$Date:: 2012-02-21 #$:  Date of last commit
+
+-->
+<tables>
+	<!--
+	LOGBOX will automatically create this table.
+	<table name="audit_log" introspect="true">
+		
+		* id : UUID
+		* severity : string
+		* category : string
+		* logdate : timestamp
+		* appendername : string
+		* message : string
+		* extrainfo : string 
+
+	</table>-->
+	<table name="crm_contacts">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="true" />
+		<field ColumnName="name" CF_DataType="CF_SQL_VARCHAR" Length="100" AllowNulls="true" />
+		<field ColumnName="lastName" CF_DataType="CF_SQL_VARCHAR" Length="100" AllowNulls="true" />
+		<field ColumnName="company" CF_DataType="CF_SQL_VARCHAR" Length="100" AllowNulls="true" />
+		<field ColumnName="address" CF_DataType="CF_SQL_VARCHAR" Length="300" AllowNulls="true" />
+		<field ColumnName="address2" CF_DataType="CF_SQL_VARCHAR" Length="300" AllowNulls="true" />
+		<field ColumnName="ste" CF_DataType="CF_SQL_VARCHAR" Length="20" AllowNulls="true" />
+		<field ColumnName="city" CF_DataType="CF_SQL_VARCHAR" Length="100" AllowNulls="true" />
+		<field ColumnName="state" CF_DataType="CF_SQL_VARCHAR" Length="100" AllowNulls="true" />
+		<field ColumnName="zipcode" CF_DataType="CF_SQL_VARCHAR" Length="10" AllowNulls="true" />
+		<field ColumnName="phone" CF_DataType="CF_SQL_VARCHAR" Length="20" AllowNulls="true" />
+		<field ColumnName="altPhone" CF_DataType="CF_SQL_VARCHAR" Length="20" AllowNulls="true" />
+		<field ColumnName="email" CF_DataType="CF_SQL_VARCHAR" Length="100" AllowNulls="true" />
+		<field ColumnName="crmUser" CF_DataType="CF_SQL_VARCHAR" Length="75" AllowNulls="true" />
+		<index indexname="PRIMARY" fields="id" unique="true" />
+	</table>
+	<table name="crm_emails">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="true" />
+		<field ColumnName="crmType" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="crmSubject" CF_DataType="CF_SQL_VARCHAR" Length="200" AllowNulls="true" />
+		<field ColumnName="crmBody" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="datecreated" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="sentTo" CF_DataType="CF_SQL_VARCHAR" Length="75" AllowNulls="true" />
+		<field ColumnName="crmUser" CF_DataType="CF_SQL_VARCHAR" Length="75" AllowNulls="true" />
+		<field ColumnName="crmFrom" CF_DataType="CF_SQL_VARCHAR" Length="75" AllowNulls="true" />
+		<field ColumnName="crmSendTo" CF_DataType="CF_SQL_VARCHAR" Length="200" AllowNulls="true" />
+		<field ColumnName="crmSig" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<index indexname="PRIMARY" fields="id" unique="true" />
+	</table>	
+	<!--
+	<table name="twilionos" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="true" />
+		<field ColumnName="phoneNumber" CF_DataType="CF_SQL_VARCHAR" Length="45" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="NULL" AllowNulls="true" />
+		<field ColumnName="PhoneName" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="uid" CF_DataType="CF_SQL_VARCHAR" Length="45" AllowNulls="true" />
+		<field ColumnName="createDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<index indexname="PRIMARY" fields="id" unique="true" />
+	</table>	
+	<table name="twiliomessages" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="true" />
+		<field ColumnName="message" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<index indexname="PRIMARY" fields="id" unique="true" />
+	</table>
+	-->	
+	<table name="testimonials" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="title" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" Length="11" AllowNulls="true" />
+		<field ColumnName="testimonial" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+	</table>	
+	<table name="landings" introspect="true">
+		<field ColumnName="idlandings" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="headline" CF_DataType="CF_SQL_VARCHAR" Length="350" AllowNulls="true" />
+		<field ColumnName="subhead" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="landingImage" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="calltoAction" CF_DataType="CF_SQL_VARCHAR" Length="75" AllowNulls="true" />
+		<field ColumnName="toutline1" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="toutline2" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="toutline3" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />				
+		<field ColumnName="superquote" CF_DataType="CF_SQL_VARCHAR" Length="350" AllowNulls="true" />
+		<field ColumnName="landingType" CF_DataType="CF_SQL_INTEGER" Length="2" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+		<field ColumnName="landingName" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="leadLogo" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="landingThankyou" CF_DataType="CF_SQL_VARCHAR" Length="1000" AllowNulls="true" />
+	</table>	
+	<table name="mailinglist" introspect="true">
+		<field ColumnName="listID" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="listName" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="listDesc" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="lastUpdate" CF_DataType="CF_SQL_TIMESTAMP" Special="LastUpdatedDate" AllowNulls="false" />
+		<field ColumnName="dateCreated" CF_DataType="CF_SQL_TIMESTAMP" Special="CreationDate" AllowNulls="false" />
+		<field ColumnName="isActive" CF_DataType="CF_SQL_BIT" AllowNulls="true" />
+		<field ColumnName="isPublic" CF_DataType="CF_SQL_BIT" AllowNulls="true" />
+	</table>
+	<table name="members2mailinglist" introspect="true">
+		<field ColumnName="listID" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+		<field ColumnName="memberID" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+	</table>
+	<table name="page_permissions" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="pageId" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+		<field ColumnName="rw" CF_DataType="CF_SQL_CHAR" Length="1" AllowNulls="false" />
+		<field ColumnName="method" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="false" />
+		<field ColumnName="argument" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="true" />
+	</table>
+	<table name="emails" introspect="true">
+		<field ColumnName="emailID" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="subject" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="BodyText" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="BodyHTML" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="CreatedDate" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+		<field ColumnName="DeliveryDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="status" CF_DataType="CF_SQL_BIT" AllowNulls="true" />
+		<field ColumnName="GroupList" CF_DataType="CF_SQL_VARCHAR" Length="25" AllowNulls="true" />
+		<field ColumnName="lastupdatedby" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="numbersent" CF_DataType="CF_SQL_INTEGER" AllowNulls="true" />
+		<field ColumnName="replyto" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="format" CF_DataType="CF_SQL_VARCHAR" Length="25" AllowNulls="true" />
+		<field ColumnName="fromLabel" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="templateID" CF_DataType="CF_SQL_INTEGER" AllowNulls="true" />
+		<field ColumnName="isDeleted" CF_DataType="CF_SQL_BIT" AllowNulls="true" />
+	</table>
+	<table name="user_resources_map_logins" introspect="true">
+		<field ColumnName="resourceId" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+		<field ColumnName="loginId" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+	</table>
+	<table name="user_resources_map_usergroups" introspect="true">
+		<field ColumnName="resourceId" PrimaryKey="true" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+		<field ColumnName="group_ID" PrimaryKey="true" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+	</table>
+	<table name="messages_sent" introspect="true">
+		<field ColumnName="msgid" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="sender" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="subject" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="body" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="DateSent" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="SentTo" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+	</table>
+	<table name="news_categories" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="title" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+	</table>
+	<table name="blog_categories" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="title" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+	</table>
+	<table name="events_categories" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="title" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+	</table>
+	<table name="locations" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="locName" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="false" />
+		<field ColumnName="address1" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="address2" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="city" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="state" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="zip" CF_DataType="CF_SQL_VARCHAR" Length="20" AllowNulls="true" />
+		<field ColumnName="countryCode" CF_DataType="CF_SQL_VARCHAR" Length="20" Default="'USA'" AllowNulls="true" />
+		<field ColumnName="longitude" CF_DataType="CF_SQL_VARCHAR" Length="10" Default="0.000000" AllowNulls="true" />
+		<field ColumnName="latitude" CF_DataType="CF_SQL_VARCHAR" Length="11" Default="0.000000" AllowNulls="true" />
+		<field ColumnName="geoLongitude" CF_DataType="CF_SQL_VARCHAR" Length="10" AllowNulls="true" />
+		<field ColumnName="geoLatitude" CF_DataType="CF_SQL_VARCHAR" Length="11" AllowNulls="true" />
+		<field ColumnName="hasGeocode" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="overrideGeocode" CF_DataType="CF_SQL_VARCHAR" Length="255" Default="0" AllowNulls="true" />
+		<field ColumnName="overrideLongitude" CF_DataType="CF_SQL_VARCHAR" Length="10" AllowNulls="true" />
+		<field ColumnName="overrideLatitude" CF_DataType="CF_SQL_VARCHAR" Length="11" AllowNulls="true" />
+		<field ColumnName="rawGeoResponse" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="image" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="description" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="dateCreated" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="true" />
+		<field ColumnName="attempts" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="iconSpecial" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />		
+	</table>
+	<table name="portfolio" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="projectName" CF_DataType="CF_SQL_VARCHAR" Length="200" AllowNulls="false" />
+		<field ColumnName="projectDescription" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="teaser" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="address1" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="address2" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="city" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="state" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="zip" CF_DataType="CF_SQL_VARCHAR" Length="20" AllowNulls="true" />
+		<field ColumnName="countryCode" CF_DataType="CF_SQL_VARCHAR" Length="20" Default="USA" AllowNulls="false" />
+		<field ColumnName="hasGeocode" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+		<field ColumnName="rawGeoResponse" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="latitude" CF_DataType="CF_SQL_DECIMAL" Default="0" AllowNulls="false" />
+		<field ColumnName="longitude" CF_DataType="CF_SQL_DECIMAL" Default="0" AllowNulls="false" />
+		<field ColumnName="attempts" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" Default="10" AllowNulls="false" />
+		<field ColumnName="status" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+		<field ColumnName="emailAddress" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="featured" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+		<field ColumnName="dateCreated" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+	</table>
+	<table name="news" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="true" />
+		<field ColumnName="category" CF_DataType="CF_SQL_VARCHAR" Length="25" AllowNulls="true" />
+		<field ColumnName="headline" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="displayDate" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="summary" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="content" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="publishDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="endDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="createDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="approved" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="seotitle" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="metaDescription" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="metaKeywords" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" Default="10" AllowNulls="true" />
+		<field ColumnName="author" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="true" />
+		<field ColumnName="fbDescription" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="fbTwitterImage" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="fbTitle" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="twitterTitle" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<index indexname="PRIMARY" fields="id" unique="true" />
+	</table>
+	
+	<table name="blog" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="true" />
+		<field ColumnName="category" CF_DataType="CF_SQL_VARCHAR" Length="25" AllowNulls="true" />
+		<field ColumnName="headline" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="displayDate" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="summary" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="content" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="publishDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="endDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="createDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="approved" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="seotitle" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="metaDescription" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="metaKeywords" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" Default="10" AllowNulls="true" />
+		<field ColumnName="author" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="true" />
+		<field ColumnName="fbDescription" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="fbTwitterImage" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="fbTitle" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="twitterTitle" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<index indexname="PRIMARY" fields="id" unique="true" />
+	</table>
+	
+	<table name="events" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="true" />
+		<field ColumnName="headline" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="eventDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="summary" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="content" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="publishDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="endDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="createDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="approved" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="seotitle" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="metaDescription" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="metaKeywords" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" Default="10" AllowNulls="true" />
+		<field ColumnName="author" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="true" />
+		<field ColumnName="fbDescription" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="fbTwitterImage" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="fbTitle" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="twitterTitle" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<index indexname="PRIMARY" fields="id" unique="true" />
+	</table>
+	<table name="events2categories" introspect="true">
+		<field ColumnName="eventId" PrimaryKey="true" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+		<field ColumnName="categoryId" PrimaryKey="true" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+	</table>
+	
+	<table name="faqs" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="question" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="false" />
+		<field ColumnName="answer" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+		<field ColumnName="dateUpdated" CF_DataType="CF_SQL_DATE" Special="LastUpdatedDate" AllowNulls="false" />
+		<field ColumnName="createdBy" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="false" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" Default="10" AllowNulls="true" />
+	</table>
+	<table name="tct_history" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="tct_id" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+		<field ColumnName="stamp" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+		<field ColumnName="slug" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="false" />
+		<field ColumnName="url" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="browserString" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="browserParsed" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="true" />
+		<field ColumnName="ipaddress" CF_DataType="CF_SQL_VARCHAR" Length="20" AllowNulls="false" />
+		<field ColumnName="referrer" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="cftoken" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+	</table>
+	<table name="link_categories" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="title" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="true" />
+		<field ColumnName="showOnSite" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+	</table>
+	<table name="splash" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="linkTitle" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="linkURL" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="image" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="teaser" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_BIT" Default="1" AllowNulls="false" />
+		<field ColumnName="siteSection" CF_DataType="CF_SQL_INTEGER" Length="11" AllowNulls="true" />
+	</table>
+	<table name="comments" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="commentOn" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="false" />
+		<field ColumnName="refID" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+		<field ColumnName="content" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="author" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="authorEmail" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="authorURL" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="approved" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+		<field ColumnName="dateCreated" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+	</table>
+	<table name="user_resources" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="title" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="filename" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="linkURL" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="description" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+		<field ColumnName="dateUpdated" CF_DataType="CF_SQL_DATE" Special="LastUpdatedDate" AllowNulls="false" />
+		<field ColumnName="uploadedBy" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="false" />
+		<field ColumnName="publishDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="endDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" Default="10" AllowNulls="true" />
+	</table>
+	<table name="portfolio_category_map" introspect="true">
+		<field ColumnName="categoryId" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+		<field ColumnName="projectId" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+	</table>
+	<table name="faqs_map_categories" introspect="true">
+		<field ColumnName="faqId" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+		<field ColumnName="categoryId" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+	</table>
+	<table name="ads" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_VARCHAR" Length="35" AllowNulls="true" />
+		<field ColumnName="clientidfk" CF_DataType="CF_SQL_VARCHAR" Length="35" AllowNulls="true" />
+		<field ColumnName="name" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="source" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="width" CF_DataType="CF_SQL_INTEGER" AllowNulls="true" />
+		<field ColumnName="height" CF_DataType="CF_SQL_INTEGER" AllowNulls="true" />
+		<field ColumnName="title" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="body" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="url" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" AllowNulls="true" />
+		<field ColumnName="created" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="true" />
+		<field ColumnName="updated" CF_DataType="CF_SQL_DATE" Special="LastUpdatedDate" AllowNulls="true" />
+		<field ColumnName="target" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="html" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+	</table>
+	<table name="campaigns" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_VARCHAR" Length="35" AllowNulls="true" PrimaryKey="true" />
+		<field ColumnName="name" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="created" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="true" />
+		<field ColumnName="updated" CF_DataType="CF_SQL_DATE" Special="LastUpdatedDate" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+	</table>
+	<table name="links" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="LinkTitle" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="LinkURL" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+		<field ColumnName="dateCreated" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+		<field ColumnName="category" CF_DataType="CF_SQL_INTEGER" Default="0" AllowNulls="false" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" Default="10" AllowNulls="false" />
+	</table>
+	<table name="user_resources_categories" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="categoryName" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="false" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" Default="10" AllowNulls="false" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+	</table>
+	<table name="career_applications" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="fname" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="lname" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="emailAddress" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="jobTitle" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="location" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="filename" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="resumeTXT" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="formPacket" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="false" />
+		<field ColumnName="dateSubmitted" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+		<field ColumnName="ipAddress" CF_DataType="CF_SQL_VARCHAR" Length="64" AllowNulls="false" />
+	</table>
+	<table name="portfolio_images" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="projectId" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+		<field ColumnName="fileName" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="caption" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="dateUploaded" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+		<field ColumnName="status" CF_DataType="CF_SQL_BIT" Default="1" AllowNulls="false" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_BIT" Default="1" AllowNulls="false" />
+	</table>
+	<table name="contacts" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="formType" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="name" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="email" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="phone" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="message" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="dateCreated" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+		<field ColumnName="formPacket" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="companyName" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="archived" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+	</table>
+	<table name="gallery_images" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="fileName" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="galleryId" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+		<field ColumnName="sortOrder" CF_DataType="CF_SQL_INTEGER" Default="10" AllowNulls="false" />
+		<field ColumnName="imageDescription" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="status" CF_DataType="CF_SQL_BIT" Default="1" AllowNulls="false" />
+		<field ColumnName="dateCreated" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+	</table>
+	<table name="geocode_cache" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="query" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="latitude" CF_DataType="CF_SQL_FLOAT" Default="0.000000" AllowNulls="false" />
+		<field ColumnName="longitude" CF_DataType="CF_SQL_FLOAT" Default="0.000000" AllowNulls="false" />
+		<field ColumnName="dateStamp" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+	</table>
+	<table name="appsettings" introspect="true">
+		<field ColumnName="setting" CF_DataType="CF_SQL_VARCHAR" PrimaryKey="true" Length="120" AllowNulls="false" />
+		<field ColumnName="value" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+	</table>
+	<table name="faqs_categories" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="categoryName" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="false" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" Default="10" AllowNulls="false" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+	</table>
+	<table name="page_customfields" introspect="true">
+		<field ColumnName="pageId" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+		<field ColumnName="field" CF_DataType="CF_SQL_VARCHAR" PrimaryKey="true" Length="85" AllowNulls="false" />
+		<field ColumnName="value" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+	</table>
+	<table name="mailinglistmembers" introspect="true">
+		<field ColumnName="email" CF_DataType="CF_SQL_VARCHAR" Length="100" AllowNulls="true" />
+		<field ColumnName="firstName" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="LastName" CF_DataType="CF_SQL_VARCHAR" Length="100" AllowNulls="true" />
+		<field ColumnName="company" CF_DataType="CF_SQL_VARCHAR" Length="100" AllowNulls="true" />
+		<field ColumnName="isVerified" CF_DataType="CF_SQL_BIT" AllowNulls="true" />
+		<field ColumnName="memberID" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+	</table>
+	<table name="logins" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="username" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="false" />
+		<field ColumnName="password" CF_DataType="CF_SQL_VARCHAR" Length="128" AllowNulls="false" />
+		<field ColumnName="displayName" CF_DataType="CF_SQL_VARCHAR" Length="80" AllowNulls="true" />
+		<field ColumnName="salt" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="temporary" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" Default="0" />
+		<!--
+			Problems on ACF 9
+		<field ColumnName="groups">
+			<relation
+			 type="list"
+			 table="usergroups"
+			 join-table="logins2usergroups"
+			 field="groupName"
+			 local-table-join-field="id"
+			 join-table-field-local="loginId"
+			 join-table-field-remote="group_ID"
+			 remote-table-join-field="group_ID"
+			/>
+		</field>
+		<field ColumnName="manager">
+			<relation
+			 type="list"
+			 table="usergroups"
+			 join-table="logins2usergroups"
+			 field="manager"
+			 local-table-join-field="id"
+			 join-table-field-local="loginId"
+			 join-table-field-remote="group_ID"
+			 remote-table-join-field="group_ID"
+			/>
+		</field>-->
+
+	</table>
+	<table name="logins2usergroups" introspect="true">
+		<field ColumnName="loginID" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+		<field ColumnName="group_ID" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+	</table>
+	<table name="usergroups" introspect="true">
+		<field ColumnName="group_ID" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="groupName" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="manager" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+	</table>
+	<table name="user_resources_map_categories" introspect="true">
+		<field ColumnName="resourceId" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+		<field ColumnName="categoryId" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" AllowNulls="false" />
+	</table>
+	<table name="ads_impressions" introspect="true">
+		<field ColumnName="thetime" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="true" />
+		<field ColumnName="adidfk" CF_DataType="CF_SQL_VARCHAR" Length="35" AllowNulls="true" />
+		<field ColumnName="campaignidfk" CF_DataType="CF_SQL_VARCHAR" Length="35" AllowNulls="true" />
+	</table>
+	<table name="page" introspect="true">
+		<field ColumnName="createDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="landingID" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="true" />
+		<field ColumnName="title" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="contentleft" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="notes" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="metaDescription" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="metaKeywords" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="url" CF_DataType="CF_SQL_VARCHAR" Length="50" AllowNulls="true" />
+		<field ColumnName="approved" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="showNav" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="parent" CF_DataType="CF_SQL_INTEGER" AllowNulls="true" />
+		<field ColumnName="isDraft" CF_DataType="CF_SQL_BIT" Default="1" AllowNulls="true" />
+		<field ColumnName="author" CF_DataType="CF_SQL_VARCHAR" Length="100" AllowNulls="true" />
+		<field ColumnName="contentright" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="seotitle" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" AllowNulls="true" />
+		<field ColumnName="redirect" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="true" />
+		<field ColumnName="redirectURL" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="fbDescription" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="fbTwitterImage" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="fbTitle" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="twitterTitle" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<index indexname="PRIMARY" fields="landingID" unique="true" />
+		<index indexname="uniqueURLbyParent" fields="parent,url" unique="true" />
+	</table>
+	<table name="careers" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="jobTitle" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="location" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="true" />
+		<field ColumnName="description" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+		<field ColumnName="publishDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="endDate" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="dateCreated" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+		<field ColumnName="dateUpdated" CF_DataType="CF_SQL_DATE" Special="LastUpdatedDate" AllowNulls="false" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_INTEGER" Default="10" AllowNulls="false" />
+	</table>
+	<table name="tct" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="slug" CF_DataType="CF_SQL_VARCHAR" Length="100" AllowNulls="false" />
+		<field ColumnName="url" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="active" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+		<field ColumnName="visits" CF_DataType="CF_SQL_INTEGER" Default="0" AllowNulls="false" />
+		<field ColumnName="lastVisitAt" CF_DataType="CF_SQL_DATE" Special="LastUpdatedDate" AllowNulls="false" />
+	</table>
+	<table name="portfolio_categories" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="categoryName" CF_DataType="CF_SQL_VARCHAR" Length="85" AllowNulls="false" />
+		<field ColumnName="caption" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="dateCreated" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+		<field ColumnName="showInNav" CF_DataType="CF_SQL_BIT" Default="1" AllowNulls="false" />
+		<field ColumnName="sortorder" CF_DataType="CF_SQL_BIT" Default="1" AllowNulls="false" />
+	</table>
+	<table name="galleries" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_INTEGER" PrimaryKey="true" Increment="true" AllowNulls="false" />
+		<field ColumnName="galleryName" CF_DataType="CF_SQL_VARCHAR" Length="255" AllowNulls="false" />
+		<field ColumnName="sortOrder" CF_DataType="CF_SQL_VARCHAR" Length="25" Default="10" AllowNulls="false" />
+		<field ColumnName="dateCreated" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+		<field ColumnName="galleryDescription" CF_DataType="CF_SQL_LONGVARCHAR" AllowNulls="true" />
+		<field ColumnName="status" CF_DataType="CF_SQL_BIT" Default="0" AllowNulls="false" />
+	</table>
+	<table name="ads_clicks" introspect="true">
+		<field ColumnName="thetime" CF_DataType="CF_SQL_DATE" Special="CreationDate" AllowNulls="false" />
+		<field ColumnName="adidfk" CF_DataType="CF_SQL_VARCHAR" Length="35" AllowNulls="true" />
+		<field ColumnName="campaignidfk" CF_DataType="CF_SQL_VARCHAR" Length="35" AllowNulls="true" />
+	</table>
+	<table name="campaigns_ads" introspect="true">
+		<field ColumnName="id" CF_DataType="CF_SQL_VARCHAR" Length="35" AllowNulls="true" />
+		<field ColumnName="campaignidfk" CF_DataType="CF_SQL_VARCHAR" Length="35" AllowNulls="true" />
+		<field ColumnName="adidfk" CF_DataType="CF_SQL_VARCHAR" Length="35" AllowNulls="true" />
+		<field ColumnName="weight" CF_DataType="CF_SQL_INTEGER" AllowNulls="true" />
+		<field ColumnName="datebegin" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="dateend" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="timebegin" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+		<field ColumnName="timeend" CF_DataType="CF_SQL_DATE" AllowNulls="true" />
+	</table>
+	
+	<table name="capabilities" introspect="true">
+		<field ColumnName="id" PrimaryKey="true" Increment="true" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+		<field ColumnName="component" CF_DataType="CF_SQL_VARCHAR" Length="128" AllowNulls="false" />
+		<field ColumnName="name" CF_DataType="CF_SQL_VARCHAR" Length="128" AllowNulls="false" />
+	</table>
+	
+	<table name="capabilities2usergroups" introspect="true">
+		<field ColumnName="group_ID" PrimaryKey="true" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+		<field ColumnName="capabilityID" PrimaryKey="true" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+	</table>
+	
+	<table name="capabilities2logins" introspect="true">
+		<field ColumnName="loginID" PrimaryKey="true" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+		<field ColumnName="capabilityID" PrimaryKey="true" CF_DataType="CF_SQL_INTEGER" AllowNulls="false" />
+	</table>
+	<data table="capabilities" permanentRows="true">
+		<row id="1" component="cfcs.pages" name="read" />
+		<row id="2" component="cfcs.pages" name="create" />
+		<row id="3" component="cfcs.pages" name="edit" />
+		<row id="4" component="cfcs.pages" name="edit_published" />
+		<row id="5" component="cfcs.pages" name="publish" />
+		<row id="6" component="cfcs.pages" name="delete" />
+		<row id="7" component="cfcs.pages" name="delete_published" />
+		<row id="8" component="cfcs.pages" name="manage_customfields" />
+		<row id="9" component="cfcs.pages" name="manage_access" />
+		<row id="10" component="cfcs.logins" name="read" />
+		<row id="11" component="cfcs.logins" name="add_user" />
+		<row id="12" component="cfcs.logins" name="delete_user" />
+		<row id="13" component="cfcs.logins" name="edit_user" />
+		<row id="14" component="cfcs.logins" name="grant_capabilities" />
+		<row id="15" component="cfcs.news" name="read" />
+		<row id="16" component="cfcs.news" name="create" />
+		<row id="17" component="cfcs.news" name="edit" />
+		<row id="18" component="cfcs.news" name="edit_published" />
+		<row id="19" component="cfcs.news" name="publish" />
+		<row id="20" component="cfcs.news" name="delete" />
+		<row id="21" component="cfcs.news" name="delete_published" />
+		<row id="22" component="cfcs.news" name="create_category" />
+		<row id="23" component="cfcs.news" name="edit_category" />
+		<row id="24" component="cfcs.news" name="delete_category" />
+		<row id="25" component="cfcs.comments" name="read" />
+		<row id="26" component="cfcs.comments" name="moderate" />
+		<row id="27" component="cfcs.comments" name="delete" />
+		<row id="28" component="cfcs.comments" name="edit" />
+		<row id="29" component="cfcs.links" name="read" />
+		<row id="30" component="cfcs.links" name="create" />
+		<row id="31" component="cfcs.links" name="edit" />
+		<row id="32" component="cfcs.links" name="edit_published" />
+		<row id="33" component="cfcs.links" name="publish" />
+		<row id="34" component="cfcs.links" name="delete" />
+		<row id="35" component="cfcs.links" name="delete_published" />
+		<row id="36" component="cfcs.links" name="read_category" />
+		<row id="37" component="cfcs.links" name="create_category" />
+		<row id="38" component="cfcs.links" name="delete_category" />
+		<row id="39" component="cfcs.contact" name="read" />
+		<row id="40" component="cfcs.contact" name="archive" />
+		<row id="41" component="cfcs.contact" name="delete" />
+		<row id="42" component="cfcs.settings" name="read" />
+		<row id="43" component="cfcs.usergroups" name="read" />
+		<row id="44" component="cfcs.usergroups" name="edit" />
+		<row id="45" component="cfcs.usergroups" name="delete" />
+		<row id="46" component="cfcs.schema" name="update" />
+		<row id="47" component="cfcs.schema" name="read" />
+		<row id="48" component="cfcs.careers" name="read" />
+		<row id="49" component="cfcs.careers" name="archive_application" />
+		<row id="50" component="cfcs.careers" name="delete" />
+		<row id="51" component="cfcs.faq" name="read" />
+		<row id="52" component="cfcs.faq" name="create" />
+		<row id="53" component="cfcs.faq" name="edit" />
+		<row id="54" component="cfcs.faq" name="edit_published" />
+		<row id="55" component="cfcs.faq" name="publish" />
+		<row id="56" component="cfcs.faq" name="delete" />
+		<row id="57" component="cfcs.faq" name="delete_published" />
+		<row id="58" component="cfcs.faq" name="read_category" />
+		<row id="59" component="cfcs.faq" name="create_category" />
+		<row id="60" component="cfcs.faq" name="delete_category" />
+		<row id="61" component="cfcs.gallery" name="read" />
+		<row id="62" component="cfcs.gallery" name="create" />
+		<row id="63" component="cfcs.gallery" name="edit" />
+		<row id="64" component="cfcs.gallery" name="edit_published" />
+		<row id="65" component="cfcs.gallery" name="publish" />
+		<row id="66" component="cfcs.gallery" name="delete" />
+		<row id="67" component="cfcs.gallery" name="delete_published" />
+		<row id="68" component="cfcs.gallery" name="read_images" />
+		<row id="69" component="cfcs.gallery" name="upload_images" />
+		<row id="70" component="cfcs.gallery" name="edit_images" />
+		<row id="71" component="cfcs.gallery" name="edit_published_images" />
+		<row id="72" component="cfcs.gallery" name="publish_images" />
+		<row id="73" component="cfcs.gallery" name="delete_images" />
+		<row id="74" component="cfcs.gallery" name="delete_published_images" />
+		<row id="75" component="cfcs.locations" name="read" />
+		<row id="76" component="cfcs.locations" name="create" />
+		<row id="77" component="cfcs.locations" name="edit" />
+		<row id="78" component="cfcs.locations" name="edit_published" />
+		<row id="79" component="cfcs.locations" name="publish" />
+		<row id="80" component="cfcs.locations" name="delete" />
+		<row id="81" component="cfcs.locations" name="delete_published" />
+		<row id="82" component="cfcs.portfolio" name="read" />
+		<row id="83" component="cfcs.portfolio" name="create" />
+		<row id="84" component="cfcs.portfolio" name="edit" />
+		<row id="85" component="cfcs.portfolio" name="edit_published" />
+		<row id="86" component="cfcs.portfolio" name="publish" />
+		<row id="87" component="cfcs.portfolio" name="delete" />
+		<row id="88" component="cfcs.portfolio" name="delete_published" />
+		<row id="89" component="cfcs.portfolio" name="read_images" />
+		<row id="90" component="cfcs.portfolio" name="upload_images" />
+		<row id="91" component="cfcs.portfolio" name="edit_images" />
+		<row id="92" component="cfcs.portfolio" name="edit_published_images" />
+		<row id="93" component="cfcs.portfolio" name="publish_images" />
+		<row id="94" component="cfcs.portfolio" name="delete_images" />
+		<row id="95" component="cfcs.portfolio" name="delete_published_images" />
+		<row id="96" component="cfcs.portfolio" name="read_category" />
+		<row id="97" component="cfcs.portfolio" name="create_category" />
+		<row id="98" component="cfcs.portfolio" name="delete_category" />
+		<row id="99" component="cfcs.resources" name="read" />
+		<row id="100" component="cfcs.resources" name="create" />
+		<row id="101" component="cfcs.resources" name="edit" />
+		<row id="102" component="cfcs.resources" name="edit_published" />
+		<row id="103" component="cfcs.resources" name="publish" />
+		<row id="104" component="cfcs.resources" name="delete" />
+		<row id="105" component="cfcs.resources" name="delete_published" />
+		<row id="106" component="cfcs.resources" name="read_category" />
+		<row id="107" component="cfcs.resources" name="create_category" />
+		<row id="108" component="cfcs.resources" name="delete_category" />
+		<row id="109" component="cfcs.splash" name="read" />
+		<row id="110" component="cfcs.splash" name="create" />
+		<row id="111" component="cfcs.splash" name="edit" />
+		<row id="112" component="cfcs.splash" name="edit_published" />
+		<row id="113" component="cfcs.splash" name="publish" />
+		<row id="114" component="cfcs.splash" name="delete" />
+		<row id="115" component="cfcs.splash" name="delete_published" />
+		<row id="116" component="cfcs.subscriptions" name="read" />
+		<row id="117" component="cfcs.subscriptions" name="add_member" />
+		<row id="118" component="cfcs.subscriptions" name="edit_member" />
+		<row id="119" component="cfcs.subscriptions" name="delete_member" />
+		<row id="120" component="cfcs.subscriptions" name="create_list" />
+		<row id="121" component="cfcs.subscriptions" name="edit_list" />
+		<row id="122" component="cfcs.subscriptions" name="delete_list" />
+		<row id="123" component="cfcs.subscriptions" name="create_mail" />
+		<row id="124" component="cfcs.subscriptions" name="edit_mail" />
+		<row id="125" component="cfcs.subscriptions" name="delete_mail" />
+		<row id="126" component="cfcs.subscriptions" name="send_mail" />
+		<row id="128" component="cfcs.settings" name="update" />
+		<row id="129" component="cfcs.news" name="read_category" />
+		<row id="130" component="cfcs.links" name="edit_category" />
+		<row id="131" component="cfcs.tct" name="read" />
+		<row id="132" component="cfcs.tct" name="create" />
+		<row id="133" component="cfcs.tct" name="edit" />
+		<row id="134" component="cfcs.tct" name="edit_published" />
+		<row id="135" component="cfcs.tct" name="publish" />
+		<row id="136" component="cfcs.tct" name="delete" />
+		<row id="137" component="cfcs.tct" name="delete_published" />
+		<row id="138" component="cfcs.subscriptions" name="export_members" />
+		<row id="139" component="cfcs.careers" name="create" />
+		<row id="140" component="cfcs.careers" name="edit" />
+		<row id="141" component="cfcs.careers" name="edit_published" />
+		<row id="142" component="cfcs.careers" name="delete_application" />
+		<row id="143" component="cfcs.careers" name="publish" />
+		<row id="144" component="cfcs.events" name="read" />
+		<row id="145" component="cfcs.events" name="create" />
+		<row id="146" component="cfcs.events" name="edit" />
+		<row id="147" component="cfcs.events" name="edit_published" />
+		<row id="148" component="cfcs.events" name="publish" />
+		<row id="149" component="cfcs.events" name="delete" />
+		<row id="150" component="cfcs.events" name="delete_published" />
+		<row id="151" component="cfcs.events" name="create_category" />
+		<row id="152" component="cfcs.events" name="edit_category" />
+		<row id="153" component="cfcs.events" name="delete_category" />
+		<row id="154" component="cfcs.events" name="read_category" />
+		<row id="155" component="cfcs.submittedNews" name="read" />
+		<row id="156" component="cfcs.submittedNews" name="archive" />
+		<row id="157" component="cfcs.submitNews" name="read" />
+		<row id="158" component="cfcs.submitNews" name="submit" />
+		<row id="159" component="cfcs.landings" name="read" />
+		<row id="160" component="cfcs.landings" name="create" />
+		<row id="161" component="cfcs.landings" name="edit" />
+		<row id="162" component="cfcs.landings" name="activate" />
+		<row id="163" component="cfcs.landings" name="delete" />
+		<row id="164" component="cfcs.testimonials" name="read" />
+		<row id="165" component="cfcs.testimonials" name="create" />
+		<row id="166" component="cfcs.testimonials" name="edit" />
+		<row id="167" component="cfcs.testimonials" name="activate" />
+		<row id="168" component="cfcs.testimonials" name="delete" />
+		<row id="169" component="cfcs.blog" name="read" />
+		<row id="170" component="cfcs.blog" name="create" />
+		<row id="171" component="cfcs.blog" name="edit" />
+		<row id="172" component="cfcs.blog" name="edit_published" />
+		<row id="173" component="cfcs.blog" name="publish" />
+		<row id="174" component="cfcs.blog" name="delete" />
+		<row id="175" component="cfcs.blog" name="delete_published" />
+		<row id="176" component="cfcs.blog" name="create_category" />
+		<row id="177" component="cfcs.blog" name="edit_category" />
+		<row id="178" component="cfcs.blog" name="delete_category" />
+		<row id="179" component="cfcs.crm" name="create" />
+		<row id="180" component="cfcs.crm" name="edit" />
+		<row id="181" component="cfcs.crm" name="push" />
+		<row id="182" component="cfcs.crm" name="delete" />	
+		<!--
+		<row id="183" component="cfcs.twilio" name="create" />
+		<row id="184" component="cfcs.twilio" name="edit" />
+		<row id="185" component="cfcs.twilio" name="delete" />
+		-->
+	</data>
+	<data table="capabilities2usergroups">
+		<row group_ID="2" capabilityID="1" />
+		<row group_ID="2" capabilityID="2" />
+		<row group_ID="2" capabilityID="3" />
+		<row group_ID="2" capabilityID="4" />
+		<row group_ID="2" capabilityID="5" />
+		<row group_ID="2" capabilityID="6" />
+		<row group_ID="2" capabilityID="7" />
+		<row group_ID="2" capabilityID="8" />
+		<row group_ID="2" capabilityID="9" />
+		<row group_ID="2" capabilityID="10" />
+		<row group_ID="2" capabilityID="11" />
+		<row group_ID="2" capabilityID="12" />
+		<row group_ID="2" capabilityID="13" />
+		<row group_ID="2" capabilityID="15" />
+		<row group_ID="2" capabilityID="16" />
+		<row group_ID="2" capabilityID="17" />
+		<row group_ID="2" capabilityID="18" />
+		<row group_ID="2" capabilityID="19" />
+		<row group_ID="2" capabilityID="20" />
+		<row group_ID="2" capabilityID="21" />
+		<row group_ID="2" capabilityID="22" />
+		<row group_ID="2" capabilityID="23" />
+		<row group_ID="2" capabilityID="24" />
+		<row group_ID="2" capabilityID="25" />
+		<row group_ID="2" capabilityID="26" />
+		<row group_ID="2" capabilityID="27" />
+		<row group_ID="2" capabilityID="28" />
+		<row group_ID="2" capabilityID="29" />
+		<row group_ID="2" capabilityID="30" />
+		<row group_ID="2" capabilityID="31" />
+		<row group_ID="2" capabilityID="32" />
+		<row group_ID="2" capabilityID="33" />
+		<row group_ID="2" capabilityID="34" />
+		<row group_ID="2" capabilityID="35" />
+		<row group_ID="2" capabilityID="36" />
+		<row group_ID="2" capabilityID="37" />
+		<row group_ID="2" capabilityID="38" />
+		<row group_ID="2" capabilityID="39" />
+		<row group_ID="2" capabilityID="40" />
+		<row group_ID="2" capabilityID="41" />
+		<row group_ID="2" capabilityID="48" />
+		<row group_ID="2" capabilityID="49" />
+		<row group_ID="2" capabilityID="50" />
+		<row group_ID="2" capabilityID="51" />
+		<row group_ID="2" capabilityID="52" />
+		<row group_ID="2" capabilityID="53" />
+		<row group_ID="2" capabilityID="54" />
+		<row group_ID="2" capabilityID="55" />
+		<row group_ID="2" capabilityID="56" />
+		<row group_ID="2" capabilityID="57" />
+		<row group_ID="2" capabilityID="58" />
+		<row group_ID="2" capabilityID="59" />
+		<row group_ID="2" capabilityID="60" />
+		<row group_ID="2" capabilityID="61" />
+		<row group_ID="2" capabilityID="62" />
+		<row group_ID="2" capabilityID="63" />
+		<row group_ID="2" capabilityID="64" />
+		<row group_ID="2" capabilityID="65" />
+		<row group_ID="2" capabilityID="66" />
+		<row group_ID="2" capabilityID="67" />
+		<row group_ID="2" capabilityID="68" />
+		<row group_ID="2" capabilityID="69" />
+		<row group_ID="2" capabilityID="70" />
+		<row group_ID="2" capabilityID="71" />
+		<row group_ID="2" capabilityID="72" />
+		<row group_ID="2" capabilityID="73" />
+		<row group_ID="2" capabilityID="74" />
+		<row group_ID="2" capabilityID="75" />
+		<row group_ID="2" capabilityID="76" />
+		<row group_ID="2" capabilityID="77" />
+		<row group_ID="2" capabilityID="78" />
+		<row group_ID="2" capabilityID="79" />
+		<row group_ID="2" capabilityID="80" />
+		<row group_ID="2" capabilityID="81" />
+		<row group_ID="2" capabilityID="82" />
+		<row group_ID="2" capabilityID="83" />
+		<row group_ID="2" capabilityID="84" />
+		<row group_ID="2" capabilityID="85" />
+		<row group_ID="2" capabilityID="86" />
+		<row group_ID="2" capabilityID="87" />
+		<row group_ID="2" capabilityID="88" />
+		<row group_ID="2" capabilityID="89" />
+		<row group_ID="2" capabilityID="90" />
+		<row group_ID="2" capabilityID="91" />
+		<row group_ID="2" capabilityID="92" />
+		<row group_ID="2" capabilityID="93" />
+		<row group_ID="2" capabilityID="94" />
+		<row group_ID="2" capabilityID="95" />
+		<row group_ID="2" capabilityID="96" />
+		<row group_ID="2" capabilityID="97" />
+		<row group_ID="2" capabilityID="98" />
+		<row group_ID="2" capabilityID="99" />
+		<row group_ID="2" capabilityID="100" />
+		<row group_ID="2" capabilityID="101" />
+		<row group_ID="2" capabilityID="102" />
+		<row group_ID="2" capabilityID="103" />
+		<row group_ID="2" capabilityID="104" />
+		<row group_ID="2" capabilityID="105" />
+		<row group_ID="2" capabilityID="106" />
+		<row group_ID="2" capabilityID="107" />
+		<row group_ID="2" capabilityID="108" />
+		<row group_ID="2" capabilityID="109" />
+		<row group_ID="2" capabilityID="110" />
+		<row group_ID="2" capabilityID="111" />
+		<row group_ID="2" capabilityID="112" />
+		<row group_ID="2" capabilityID="113" />
+		<row group_ID="2" capabilityID="114" />
+		<row group_ID="2" capabilityID="115" />
+		<row group_ID="2" capabilityID="116" />
+		<row group_ID="2" capabilityID="117" />
+		<row group_ID="2" capabilityID="118" />
+		<row group_ID="2" capabilityID="119" />
+		<row group_ID="2" capabilityID="120" />
+		<row group_ID="2" capabilityID="121" />
+		<row group_ID="2" capabilityID="122" />
+		<row group_ID="2" capabilityID="123" />
+		<row group_ID="2" capabilityID="124" />
+		<row group_ID="2" capabilityID="125" />
+		<row group_ID="2" capabilityID="126" />
+		<row group_ID="2" capabilityID="128" />
+		<row group_ID="2" capabilityID="129" />
+		<row group_ID="2" capabilityID="130" />
+		<row group_ID="2" capabilityID="131" />
+		<row group_ID="2" capabilityID="132" />
+		<row group_ID="2" capabilityID="133" />
+		<row group_ID="2" capabilityID="134" />
+		<row group_ID="2" capabilityID="135" />
+		<row group_ID="2" capabilityID="136" />
+		<row group_ID="2" capabilityID="137" />
+		<row group_ID="2" capabilityID="138" />
+		<row group_ID="2" capabilityID="139" />
+		<row group_ID="2" capabilityID="140" />
+		<row group_ID="2" capabilityID="141" />
+		<row group_ID="2" capabilityID="142" />
+		<row group_ID="2" capabilityID="143" />
+		<row group_ID="2" capabilityID="144" />
+		<row group_ID="2" capabilityID="145" />
+		<row group_ID="2" capabilityID="146" />
+		<row group_ID="2" capabilityID="147" />
+		<row group_ID="2" capabilityID="148" />
+		<row group_ID="2" capabilityID="149" />
+		<row group_ID="2" capabilityID="150" />
+		<row group_ID="2" capabilityID="151" />
+		<row group_ID="2" capabilityID="152" />
+		<row group_ID="2" capabilityID="153" />
+		<row group_ID="2" capabilityID="154" />
+		<row group_ID="2" capabilityID="155" />
+		<row group_ID="2" capabilityID="156" />
+		<row group_ID="2" capabilityID="157" />
+		<row group_ID="2" capabilityID="158" />
+		<row group_ID="2" capabilityID="159" />
+		<row group_ID="2" capabilityID="160" />
+		<row group_ID="2" capabilityID="161" />
+		<row group_ID="2" capabilityID="162" />
+		<row group_ID="2" capabilityID="163" />	
+		<row group_ID="2" capabilityID="164" />
+		<row group_ID="2" capabilityID="165" />
+		<row group_ID="2" capabilityID="166" />
+		<row group_ID="2" capabilityID="167" />
+		<row group_ID="2" capabilityID="168" />
+		<row group_ID="2" capabilityID="169" />
+		<row group_ID="2" capabilityID="170" />
+		<row group_ID="2" capabilityID="171" />
+		<row group_ID="2" capabilityID="172" />
+		<row group_ID="2" capabilityID="173" />	
+		<row group_ID="2" capabilityID="174" />	
+		<row group_ID="2" capabilityID="175" />																
+		<row group_ID="3" capabilityID="1" />
+		<row group_ID="3" capabilityID="2" />
+		<row group_ID="3" capabilityID="3" />
+		<row group_ID="3" capabilityID="4" />
+		<row group_ID="3" capabilityID="5" />
+		<row group_ID="3" capabilityID="6" />
+		<row group_ID="3" capabilityID="7" />
+		<row group_ID="3" capabilityID="8" />
+		<row group_ID="3" capabilityID="9" />
+		<row group_ID="3" capabilityID="15" />
+		<row group_ID="3" capabilityID="16" />
+		<row group_ID="3" capabilityID="17" />
+		<row group_ID="3" capabilityID="18" />
+		<row group_ID="3" capabilityID="19" />
+		<row group_ID="3" capabilityID="20" />
+		<row group_ID="3" capabilityID="21" />
+		<row group_ID="3" capabilityID="22" />
+		<row group_ID="3" capabilityID="23" />
+		<row group_ID="3" capabilityID="24" />
+		<row group_ID="3" capabilityID="25" />
+		<row group_ID="3" capabilityID="26" />
+		<row group_ID="3" capabilityID="27" />
+		<row group_ID="3" capabilityID="28" />
+		<row group_ID="3" capabilityID="29" />
+		<row group_ID="3" capabilityID="30" />
+		<row group_ID="3" capabilityID="31" />
+		<row group_ID="3" capabilityID="32" />
+		<row group_ID="3" capabilityID="33" />
+		<row group_ID="3" capabilityID="34" />
+		<row group_ID="3" capabilityID="35" />
+		<row group_ID="3" capabilityID="36" />
+		<row group_ID="3" capabilityID="37" />
+		<row group_ID="3" capabilityID="38" />
+		<row group_ID="3" capabilityID="39" />
+		<row group_ID="3" capabilityID="40" />
+		<row group_ID="3" capabilityID="48" />
+		<row group_ID="3" capabilityID="49" />
+		<row group_ID="3" capabilityID="50" />
+		<row group_ID="3" capabilityID="51" />
+		<row group_ID="3" capabilityID="52" />
+		<row group_ID="3" capabilityID="53" />
+		<row group_ID="3" capabilityID="54" />
+		<row group_ID="3" capabilityID="55" />
+		<row group_ID="3" capabilityID="56" />
+		<row group_ID="3" capabilityID="57" />
+		<row group_ID="3" capabilityID="58" />
+		<row group_ID="3" capabilityID="59" />
+		<row group_ID="3" capabilityID="60" />
+		<row group_ID="3" capabilityID="61" />
+		<row group_ID="3" capabilityID="62" />
+		<row group_ID="3" capabilityID="63" />
+		<row group_ID="3" capabilityID="64" />
+		<row group_ID="3" capabilityID="65" />
+		<row group_ID="3" capabilityID="66" />
+		<row group_ID="3" capabilityID="67" />
+		<row group_ID="3" capabilityID="68" />
+		<row group_ID="3" capabilityID="69" />
+		<row group_ID="3" capabilityID="70" />
+		<row group_ID="3" capabilityID="71" />
+		<row group_ID="3" capabilityID="72" />
+		<row group_ID="3" capabilityID="73" />
+		<row group_ID="3" capabilityID="74" />
+		<row group_ID="3" capabilityID="75" />
+		<row group_ID="3" capabilityID="76" />
+		<row group_ID="3" capabilityID="77" />
+		<row group_ID="3" capabilityID="78" />
+		<row group_ID="3" capabilityID="79" />
+		<row group_ID="3" capabilityID="80" />
+		<row group_ID="3" capabilityID="81" />
+		<row group_ID="3" capabilityID="82" />
+		<row group_ID="3" capabilityID="83" />
+		<row group_ID="3" capabilityID="84" />
+		<row group_ID="3" capabilityID="85" />
+		<row group_ID="3" capabilityID="86" />
+		<row group_ID="3" capabilityID="87" />
+		<row group_ID="3" capabilityID="88" />
+		<row group_ID="3" capabilityID="89" />
+		<row group_ID="3" capabilityID="90" />
+		<row group_ID="3" capabilityID="91" />
+		<row group_ID="3" capabilityID="92" />
+		<row group_ID="3" capabilityID="93" />
+		<row group_ID="3" capabilityID="94" />
+		<row group_ID="3" capabilityID="95" />
+		<row group_ID="3" capabilityID="96" />
+		<row group_ID="3" capabilityID="97" />
+		<row group_ID="3" capabilityID="98" />
+		<row group_ID="3" capabilityID="99" />
+		<row group_ID="3" capabilityID="100" />
+		<row group_ID="3" capabilityID="101" />
+		<row group_ID="3" capabilityID="102" />
+		<row group_ID="3" capabilityID="103" />
+		<row group_ID="3" capabilityID="104" />
+		<row group_ID="3" capabilityID="105" />
+		<row group_ID="3" capabilityID="109" />
+		<row group_ID="3" capabilityID="110" />
+		<row group_ID="3" capabilityID="111" />
+		<row group_ID="3" capabilityID="112" />
+		<row group_ID="3" capabilityID="113" />
+		<row group_ID="3" capabilityID="114" />
+		<row group_ID="3" capabilityID="115" />
+		<row group_ID="3" capabilityID="116" />
+		<row group_ID="3" capabilityID="123" />
+		<row group_ID="3" capabilityID="124" />
+		<row group_ID="3" capabilityID="129" />
+		<row group_ID="3" capabilityID="130" />
+		<row group_ID="3" capabilityID="131" />
+		<row group_ID="3" capabilityID="132" />
+		<row group_ID="3" capabilityID="138" />
+		<row group_ID="3" capabilityID="139" />
+		<row group_ID="3" capabilityID="140" />
+		<row group_ID="3" capabilityID="141" />
+		<row group_ID="3" capabilityID="142" />
+		<row group_ID="3" capabilityID="143" />
+		<row group_ID="3" capabilityID="157" />
+		<row group_ID="3" capabilityID="158" />
+		<row group_ID="3" capabilityID="172" />
+		<row group_ID="3" capabilityID="173" />	
+		<row group_ID="3" capabilityID="174" />	
+		<row group_ID="3" capabilityID="175" />			
+		<row group_ID="4" capabilityID="1" />
+		<row group_ID="4" capabilityID="2" />
+		<row group_ID="4" capabilityID="3" />
+		<row group_ID="4" capabilityID="6" />
+		<row group_ID="4" capabilityID="15" />
+		<row group_ID="4" capabilityID="16" />
+		<row group_ID="4" capabilityID="17" />
+		<row group_ID="4" capabilityID="20" />
+		<row group_ID="4" capabilityID="25" />
+		<row group_ID="4" capabilityID="29" />
+		<row group_ID="4" capabilityID="30" />
+		<row group_ID="4" capabilityID="31" />
+		<row group_ID="4" capabilityID="34" />
+		<row group_ID="4" capabilityID="48" />
+		<row group_ID="4" capabilityID="50" />
+		<row group_ID="4" capabilityID="51" />
+		<row group_ID="4" capabilityID="52" />
+		<row group_ID="4" capabilityID="53" />
+		<row group_ID="4" capabilityID="56" />
+		<row group_ID="4" capabilityID="61" />
+		<row group_ID="4" capabilityID="62" />
+		<row group_ID="4" capabilityID="63" />
+		<row group_ID="4" capabilityID="66" />
+		<row group_ID="4" capabilityID="68" />
+		<row group_ID="4" capabilityID="70" />
+		<row group_ID="4" capabilityID="73" />
+		<row group_ID="4" capabilityID="75" />
+		<row group_ID="4" capabilityID="76" />
+		<row group_ID="4" capabilityID="77" />
+		<row group_ID="4" capabilityID="80" />
+		<row group_ID="4" capabilityID="82" />
+		<row group_ID="4" capabilityID="83" />
+		<row group_ID="4" capabilityID="84" />
+		<row group_ID="4" capabilityID="87" />
+		<row group_ID="4" capabilityID="89" />
+		<row group_ID="4" capabilityID="91" />
+		<row group_ID="4" capabilityID="94" />
+		<row group_ID="4" capabilityID="99" />
+		<row group_ID="4" capabilityID="100" />
+		<row group_ID="4" capabilityID="101" />
+		<row group_ID="4" capabilityID="104" />
+		<row group_ID="4" capabilityID="109" />
+		<row group_ID="4" capabilityID="110" />
+		<row group_ID="4" capabilityID="111" />
+		<row group_ID="4" capabilityID="114" />
+		<row group_ID="4" capabilityID="131" />
+		<row group_ID="4" capabilityID="132" />
+		<row group_ID="4" capabilityID="133" />
+		<row group_ID="4" capabilityID="136" />
+		<row group_ID="4" capabilityID="139" />
+		<row group_ID="4" capabilityID="140" />
+	</data>
+	<data table="appsettings" permanentRows="true">
+		<row setting="APP.SCHEMAVERSION" value="$rev: 000$" />
+		<row setting="APP.SCHEMADATE" value="$date: 2014-02-24 8:00:00 am$ $by: author: frank $" />
+		<row setting="APP.HIDEVERSIONINFO" value="false" />
+	</data>
+	<data table="appsettings">
+		<row setting="SEARCH.URL" value="search" />
+		<row setting="SEARCH.ENGINE" value="google" />
+		<row setting="LOCATIONS.ENGINE" value="google" />
+		<row setting="LOCATIONS.URL" value="locations" />
+		<row setting="APP.CSSFILES" value="/css/datepicker.css, /css/main.css, /css/flexslider.css" />
+		<row setting="APP.JSFILES" value="/js/jquery.datepicker.js,/js/jquery.form.js,/js/common.js" />
+		<row setting="APP.GOOGLESITEVERIFICATION" value="" />
+		<row setting="APP.MSVALIDATE" value="" />
+		<row setting="APP.YAHOOKEY" value="" />
+		<row setting="APP.GOOGLEPLUSPROFILE" value="" />
+		<row setting="blog.blogTITLE" value="blog" />
+		<row setting="blog.blogURL" value="blog" />
+		<row setting="blog.SHOWCATEGORIES" value="false" />
+		<row setting="blog.TOPLIMIT" value="4" />
+		<row setting="blog.DATEFORMAT" value="mm/dd/yyyy" />
+		<row setting="CONTACT.EMAILNOTIFY" value="0" />
+		<row setting="CONTACT.EMAILNOTIFYTO" value="" />
+		<row setting="CONTACT.EMAILNOTIFYFROM" value="" />
+		<row setting="CONTACT.EMAILNOTIFYBCC" value="receipt@c3design.com" />
+		<row setting="CONTACT.EMAILNOTIFYSUBJECT" value="" />
+		<row setting="CONTACT.FORMFIELDS" value="name,email,phone,message,companyName,date,formType" />
+		<row setting="CONTACT.LABELFIELDS" value="Name,Email,Phone,Message,Company Name, Date Submitted, Form Type" />
+		<row setting="CONTACT.LISTFIELDS" value="" />
+		<row setting="DEBUG_LEVEL" value="false" />
+		<row setting="DEFAULTDESCRIPTION" value="" />
+		<row setting="DEFAULTKEYWORDS" value="" />
+		<row setting="MODULES" value="settings,schema,logs,logins,usergroups" />
+		<row setting="NEWS.NEWSTITLE" value="News" />
+		<row setting="NEWS.NEWSURL" value="news" />
+		<row setting="NEWS.SHOWCATEGORIES" value="false" />
+		<row setting="NEWS.TOPLIMIT" value="4" />
+		<row setting="NEWS.DATEFORMAT" value="mm/dd/yyyy" />
+		<row setting="EVENTS.TITLE" value="Events" />
+		<row setting="EVENTS.URL" value="events" />
+		<row setting="EVENTS.SHOWCATEGORIES" value="false" />
+		<row setting="EVENTS.TOPLIMIT" value="4" />
+		<row setting="EVENTS.DATEFORMAT" value="mm/dd/yyyy" />
+		<row setting="PRETTYURLS" value="false" />
+		<row setting="RANDOMIMAGE.IMAGEPOOL" value="/images/pool/" />
+		<row setting="SITETITLE" value="Site Title" />
+		<row setting="TITLESUFFIX" value="| GenX" />
+		<row setting="TRACKING_CODE" value="" />
+		<row setting="IMAGES.PATH" value="/uploads/gallery/" />
+		<row setting="IMAGES.THUMBWIDTH" value="100" />
+		<row setting="IMAGES.THUMBHEIGHT" value="100" />
+		<row setting="IMAGES.RESIZEWIDTH" value="400" />
+		<row setting="IMAGES.RESIZEHEIGHT" value="350" />
+		<row setting="RESOURCES.TOPLIMIT" value="5" />
+		<row setting="APP.CACHETIME" value="0" />
+		<!--
+		<row setting="TWILIO.ACCOUNTSID" value="YOUR_TWILIO_ACCOUNT_SID" />
+		<row setting="TWILIO.AUTHTOKEN" value="YOUR_TWILIO_ACCOUNT_TOKEN" />
+		<row setting="TWILIO.SMSNUMBER" value="YOUR_TWILIO_ACCOUNT_SMSNUMBER" />
+		-->
+		<row setting="TwitterHandle" value="" />
+	</data>
+	
+	<data table="logins">
+		<row id="1" username="admin@example.org"
+		 password="E8381057D87549D9D7CD3AFA5C1FBBDDD08D01BDB77AFC676DC43C503264E1A8A7C19DDD0CBC2D84D0EC650136911D3749E16FCFDD811DE85F5A405D313F4F5A"
+		 salt="Dd4yhrFpkkQe7d0J7TCwXw=="
+		 displayName="default admin" />
+		 
+	</data>
+	<data table="logins2usergroups">
+		<row loginId="1" group_ID="2" />
+		<row loginId="2" group_ID="1" />
+		<row loginId="3" group_ID="1" />
+		<row loginId="4" group_ID="1" />
+		<row loginId="5" group_ID="1" />
+	</data>
+	
+	<data table="usergroups">
+		<row group_ID="1" groupName="Super Admin" manager="1" />
+		<row group_ID="2" groupName="Administrator" manager="1" />
+		<row group_ID="3" groupName="Editor" manager="1" />
+		<row group_ID="4" groupName="Contributor" manager="1" />
+		<row group_ID="5" groupName="Subscriber" manager="0" />
+	</data>
+	
+	
+	
+	<data table="page" permanentRows="true" checkFields="url">
+		<row title="Home" url="home" approved="1" isDraft="0" parent="0" sortorder="0" contentleft="" />
+		<row title="CSS Test" url="css-test" approved="1" isDraft="0" parent="0" sortorder="1000" showNav="0" contentleft="
+&lt;div id=&quot;anchor-samples&quot;&gt;
+	&lt;ul&gt;
+	    &lt;li&gt;&lt;a href=&quot;#headers-samples&quot;&gt;Headers&lt;/a&gt;&lt;/li&gt;
+	    &lt;li&gt;&lt;a href=&quot;#text-samples&quot;&gt;Text&lt;/a&gt;&lt;/li&gt;
+	    &lt;li&gt;&lt;a href=&quot;#list-samples&quot;&gt;List&lt;/a&gt;&lt;/li&gt;
+	    &lt;li&gt;&lt;a href=&quot;#table-samples&quot;&gt;Table&lt;/a&gt;&lt;/li&gt;
+	    &lt;li&gt;&lt;a href=&quot;#form-samples&quot;&gt;Form&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;headers-samples&quot;&gt;
+	&lt;h1&gt;Header 1&lt;/h1&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ea, molestias maiores deserunt quas dignissimos fugiat modi quos laborum vel. Architecto, ipsam omnis pariatur commodi modi laudantium reiciendis odio placeat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, at, velit, animi, et sit aliquid doloribus voluptatum voluptatibus ullam enim quae tempora voluptates officiis ipsa dolor ut necessitatibus. Hic, incidunt.&lt;/p&gt;
+	&lt;h2&gt;Header 2&lt;/h2&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sapiente, rem, ipsum ipsam sunt odit accusamus veniam fuga natus inventore est itaque illo omnis soluta reiciendis quae facere minima facilis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, voluptatem, sint, consectetur praesentium optio reprehenderit similique porro accusantium dicta consequuntur distinctio iste impedit sunt atque sapiente deleniti doloribus quod nobis!&lt;/p&gt;
+	&lt;h3&gt;Header 3&lt;/h3&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sed, recusandae voluptate ipsum non deleniti omnis culpa quisquam. Officiis, perferendis quibusdam harum modi ab dolor minima eveniet dolorem facilis placeat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, ipsum, voluptatum, nulla quae minus cupiditate sed aut accusamus quasi laudantium esse iure molestias magnam quo nobis! Tenetur vitae repellendus voluptates!&lt;/p&gt;
+	&lt;h4&gt;Header 4&lt;/h4&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, expedita earum ratione blanditiis magni quis possimus sequi accusantium quam suscipit veniam accusamus officiis dolor natus tenetur vel similique quos nobis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, distinctio in ex soluta dolore architecto ipsum libero voluptate modi animi voluptatum nesciunt voluptatibus quidem fuga tempore dignissimos suscipit ut nihil.&lt;/p&gt;
+	&lt;h5&gt;Header 5&lt;/h5&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, iure quis blanditiis repellat distinctio mollitia fugit animi accusantium recusandae quos cum molestiae adipisci voluptas suscipit neque modi quisquam reprehenderit voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, voluptatum voluptate atque accusantium possimus suscipit modi repudiandae nobis magni dicta libero assumenda nesciunt voluptatem inventore doloremque veritatis reiciendis. Architecto, non.&lt;/p&gt;
+	&lt;h6&gt;Header 6&lt;/h6&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, quod, ratione laboriosam aspernatur optio ex ab cupiditate unde animi similique ipsum doloremque eius commodi beatae quidem repellat sit atque nemo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae nostrum sunt ducimus vero assumenda molestiae illum. Eligendi, tempora, dicta, illum blanditiis quaerat id sunt vero expedita quod omnis ab.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div id=&quot;text-samples&quot;&gt;
+	&lt;div id=&quot;messages&quot;&gt;
+		&lt;p class=&quot;error&quot;&gt;This is an error message&lt;/p&gt;
+	&lt;/div&gt;
+	
+	&lt;blockquote&gt;
+		&lt;p&gt;This is a paragraph inside of a blockquote&lt;/p&gt;
+	&lt;/blockquote&gt;
+	
+	&lt;address&gt;Address: 1 Simple Way&lt;/address&gt;
+	
+	&lt;p&gt;This paragraph uses &lt;span&gt;valid&lt;/span&gt; &lt;abbr title=&quot;eXtensible Hypertext Markup Language&quot;&gt;XHTML&lt;/abbr&gt;. &lt;strong&gt;Strong markup&lt;/strong&gt; is used along with &lt;em&gt;Emphasis on this text&lt;/em&gt;&lt;/p&gt;
+	&lt;pre&gt;
+	Preformatted markup                can have a lot of spaces!&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div id=&quot;list-samples&quot;&gt;
+	&lt;ul&gt;
+	    &lt;li&gt;Unordered list 01&lt;/li&gt;
+	    &lt;li&gt;Unordered list 02&lt;/li&gt;
+	    &lt;li&gt;Unordered list 03
+	    &lt;ul&gt;
+	        &lt;li&gt;Unordered list inside list level 2&lt;/li&gt;
+	        &lt;li&gt;Unordered list inside list level 2
+	        &lt;ul&gt;
+	            &lt;li&gt;Unordered list inside list level 3&lt;/li&gt;
+	            &lt;li&gt;Unordered list inside list level 3&lt;/li&gt;
+	        &lt;/ul&gt;
+	        &lt;/li&gt;
+	    &lt;/ul&gt;
+	    &lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;ol&gt;
+	    &lt;li&gt;Ordered list 01&lt;/li&gt;
+	    &lt;li&gt;Ordered list 02&lt;/li&gt;
+	    &lt;li&gt;Ordered list 03
+	    &lt;ol&gt;
+	        &lt;li&gt;Ordered list inside list level 2&lt;/li&gt;
+	        &lt;li&gt;Ordered list inside list level 2
+	        &lt;ol&gt;
+	            &lt;li&gt;Ordered list inside list level 3&lt;/li&gt;
+	            &lt;li&gt;Ordered list inside list level 3&lt;/li&gt;
+	        &lt;/ol&gt;
+	        &lt;/li&gt;
+	    &lt;/ol&gt;
+	    &lt;/li&gt;
+	&lt;/ol&gt;
+
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div id=&quot;table-samples&quot;&gt;
+	&lt;table summary=&quot;This is a sample table&quot;&gt;
+	    &lt;caption&gt;Sample Table&lt;/caption&gt;
+	    &lt;colgroup&gt;
+	    	&lt;col class=&quot;this&quot; /&gt;
+	    	&lt;col class=&quot;that&quot; /&gt;
+	    	&lt;col class=&quot;this&quot; /&gt;
+	    	&lt;col class=&quot;that&quot; /&gt;
+	    	&lt;col class=&quot;this&quot; /&gt;
+	    	&lt;col class=&quot;that&quot; /&gt;
+	    &lt;/colgroup&gt;
+	    &lt;thead&gt;
+	        &lt;tr&gt;
+	            &lt;th&gt;First&lt;/th&gt;
+	            &lt;th&gt;Second&lt;/th&gt;
+	            &lt;th&gt;Third&lt;/th&gt;
+	            &lt;th&gt;Fourth&lt;/th&gt;
+	            &lt;th&gt;Fifth&lt;/th&gt;
+	            &lt;th&gt;Sixth&lt;/th&gt;
+	        &lt;/tr&gt;
+	    &lt;/thead&gt;
+	    &lt;tfoot&gt;
+	    &lt;tr&gt;
+	        &lt;th&gt;First&lt;/th&gt;
+	        &lt;th&gt;Second&lt;/th&gt;
+	        &lt;th&gt;Third&lt;/th&gt;
+	        &lt;th&gt;Fourth&lt;/th&gt;
+	        &lt;th&gt;Fifth&lt;/th&gt;
+	        &lt;th&gt;Sixth&lt;/th&gt;
+	    &lt;/tr&gt;
+	    &lt;/tfoot&gt;
+	    &lt;tbody&gt;
+	        &lt;tr class=&quot;odd&quot;&gt;
+	            &lt;td&gt;Row 1 Column 1&lt;/td&gt;
+	            &lt;td&gt;Row 1 Column 2&lt;/td&gt;
+	            &lt;td&gt;Row 1 Column 3&lt;/td&gt;
+	            &lt;td&gt;Row 1 Column 4&lt;/td&gt;
+	            &lt;td&gt;Row 1 Column 5&lt;/td&gt;
+	            &lt;td&gt;Row 1 Column 6&lt;/td&gt;
+	        &lt;/tr&gt;
+	        &lt;tr class=&quot;even&quot;&gt;
+	            &lt;td&gt;Row 2 Column 1&lt;/td&gt;
+	            &lt;td&gt;Row 2 Column 2&lt;/td&gt;
+	            &lt;td&gt;Row 2 Column 3&lt;/td&gt;
+	            &lt;td&gt;Row 2 Column 4&lt;/td&gt;
+	            &lt;td&gt;Row 2 Column 5&lt;/td&gt;
+	            &lt;td&gt;Row 2 Column 6&lt;/td&gt;
+	        &lt;/tr&gt;
+	        &lt;tr class=&quot;odd&quot;&gt;
+	            &lt;td&gt;Row 3 Column 1&lt;/td&gt;
+	            &lt;td&gt;Row 3 Column 2&lt;/td&gt;
+	            &lt;td&gt;Row 3 Column 3&lt;/td&gt;
+	            &lt;td&gt;Row 3 Column 4&lt;/td&gt;
+	            &lt;td&gt;Row 3 Column 5&lt;/td&gt;
+	            &lt;td&gt;Row 3 Column 6&lt;/td&gt;
+	        &lt;/tr&gt;
+	        &lt;tr class=&quot;even&quot;&gt;
+	            &lt;td&gt;Row 4 Column 1&lt;/td&gt;
+	            &lt;td&gt;Row 4 Column 2&lt;/td&gt;
+	            &lt;td&gt;Row 4 Column 3&lt;/td&gt;
+	            &lt;td&gt;Row 4 Column 4&lt;/td&gt;
+	            &lt;td&gt;Row 4 Column 5&lt;/td&gt;
+	            &lt;td&gt;Row 4 Column 6&lt;/td&gt;
+	        &lt;/tr&gt;
+	        &lt;tr class=&quot;odd&quot;&gt;
+	            &lt;td&gt;Row 5 Column 1&lt;/td&gt;
+	            &lt;td&gt;Row 5 Column 2&lt;/td&gt;
+	            &lt;td&gt;Row 5 Column 3&lt;/td&gt;
+	            &lt;td&gt;Row 5 Column 4&lt;/td&gt;
+	            &lt;td&gt;Row 5 Column 5&lt;/td&gt;
+	            &lt;td&gt;Row 5 Column 6&lt;/td&gt;
+	        &lt;/tr&gt;
+	        &lt;tr class=&quot;even&quot;&gt;
+	            &lt;td&gt;Row 6 Column 1&lt;/td&gt;
+	            &lt;td&gt;Row 6 Column 2&lt;/td&gt;
+	            &lt;td&gt;Row 6 Column 3&lt;/td&gt;
+	            &lt;td&gt;Row 6 Column 4&lt;/td&gt;
+	            &lt;td&gt;Row 6 Column 5&lt;/td&gt;
+	            &lt;td&gt;Row 6 Column 6&lt;/td&gt;
+	        &lt;/tr&gt;
+	    &lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div id=&quot;form-samples&quot;&gt;
+	&lt;form&gt;
+	  &lt;div class=&quot;row&quot;&gt;
+	    &lt;div class=&quot;large-12 columns&quot;&gt;
+	      &lt;label&gt;Input Label
+	        &lt;input type=&quot;text&quot; placeholder=&quot;large-12.columns&quot; /&gt;
+	      &lt;/label&gt;
+	    &lt;/div&gt;
+	  &lt;/div&gt;
+	  &lt;div class=&quot;row&quot;&gt;
+	    &lt;div class=&quot;large-4 columns&quot;&gt;
+	      &lt;label&gt;Input Label
+	        &lt;input type=&quot;text&quot; placeholder=&quot;large-4.columns&quot; /&gt;
+	      &lt;/label&gt;
+	    &lt;/div&gt;
+	    &lt;div class=&quot;large-4 columns&quot;&gt;
+	      &lt;label&gt;Input Label
+	        &lt;input type=&quot;text&quot; placeholder=&quot;large-4.columns&quot; /&gt;
+	      &lt;/label&gt;
+	    &lt;/div&gt;
+	    &lt;div class=&quot;large-4 columns&quot;&gt;
+	      &lt;label&gt;Input Label
+	        &lt;input type=&quot;text&quot; placeholder=&quot;large-4.columns&quot; /&gt;
+	      &lt;/label&gt;
+	    &lt;/div&gt;
+	  &lt;/div&gt;
+	  &lt;div class=&quot;row&quot;&gt;
+	    &lt;div class=&quot;large-12 columns&quot;&gt;
+	      &lt;label&gt;Select Box
+	        &lt;select&gt;
+	          &lt;option value=&quot;starbuck&quot;&gt;Starbuck&lt;/option&gt;
+	          &lt;option value=&quot;husker&quot;&gt;Husker&lt;/option&gt;
+	          &lt;option value=&quot;hotdog&quot;&gt;Hot Dog&lt;/option&gt;
+	          &lt;option value=&quot;apollo&quot;&gt;Apollo&lt;/option&gt;
+	        &lt;/select&gt;
+	      &lt;/label&gt;
+	    &lt;/div&gt;
+	  &lt;/div&gt;
+	  &lt;div class=&quot;row&quot;&gt;
+	    &lt;div class=&quot;large-6 columns&quot;&gt;
+	      &lt;label&gt;Choose Your Favorite&lt;/label&gt;
+	      &lt;input type=&quot;radio&quot; name=&quot;pokemon&quot; value=&quot;Red&quot; id=&quot;pokemonRed&quot;&gt;&lt;label for=&quot;pokemonRed&quot;&gt;Red&lt;/label&gt;
+	      &lt;input type=&quot;radio&quot; name=&quot;pokemon&quot; value=&quot;Blue&quot; id=&quot;pokemonBlue&quot;&gt;&lt;label for=&quot;pokemonBlue&quot;&gt;Blue&lt;/label&gt;
+	    &lt;/div&gt;
+	    &lt;div class=&quot;large-6 columns&quot;&gt;
+	      &lt;label&gt;Check these out&lt;/label&gt;
+	      &lt;input id=&quot;checkbox1&quot; type=&quot;checkbox&quot;&gt;&lt;label for=&quot;checkbox1&quot;&gt;Checkbox 1&lt;/label&gt;
+	      &lt;input id=&quot;checkbox2&quot; type=&quot;checkbox&quot;&gt;&lt;label for=&quot;checkbox2&quot;&gt;Checkbox 2&lt;/label&gt;
+	    &lt;/div&gt;
+	  &lt;/div&gt;
+	  &lt;div class=&quot;row&quot;&gt;
+	    &lt;div class=&quot;large-12 columns&quot;&gt;
+	      &lt;label&gt;Textarea Label
+	        &lt;textarea placeholder=&quot;small-12.columns&quot;&gt;&lt;/textarea&gt;
+	      &lt;/label&gt;
+	    &lt;/div&gt;
+	  &lt;/div&gt;
+	&lt;/form&gt;
+&lt;/div&gt;" />
+	</data>
+</tables>
+
+

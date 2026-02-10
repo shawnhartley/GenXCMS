@@ -1,0 +1,42 @@
+/*  ---------------------------------------------------
+	:: _variables.scss
+	------------------------------------------------ */
+	
+// 	This file is for additional variables not defined in foundation/_settings.scss
+	
+	/* Fonts */
+	$mainFont: 'Raleway', sans-serif;
+	
+	
+	/* Colors */
+	
+	$darkGray: #333333;
+	$midGray: #54585a;
+	$lightGray: #d9d9d9;
+	$orange: #d76519;
+	$red: #c60f13;
+	
+	$mainColor: #41b6e6;
+	$secondary-color: $darkGray;
+	
+	// 	This is fed to foundation/_settings.scss
+	$C3D-foundation-palette: (
+	  primary: $mainColor,
+	  secondary: $darkGray,
+	  success: #3adb76,
+	  warning: $orange,
+	  alert: $red,
+	);
+	
+	/* Menu button */
+	
+	$opener-button-margin: 10px;
+	
+	$hamburger-width: 20px;
+	$hamburger-height: 16px;
+	$hamburger-patty-thickness: 2px;
+	$hamburger-patty-color: $mainColor;
+	
+	/* Site-specific variables */
+	
+	

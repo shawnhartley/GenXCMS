@@ -1,0 +1,69 @@
+/*  ---------------------------------------------------
+	:: Footer
+	------------------------------------------------ */
+#footer {
+	width:100%;
+	background: $mainColor;
+	padding-top:20px;
+	padding-bottom:20px;
+	
+	a {
+		color: white;
+	}
+	
+	#footer-logo{
+		svg{ fill: $white;}
+	}
+	
+	#footernav{
+		a{
+			text-decoration: none;
+		}
+		li.active a, li:hover a{
+			background: $white;
+			color: $mainColor;
+		}
+
+		
+	}
+		
+	#socialnav{
+		justify-content: center;
+		svg{
+			margin: 0;
+			fill: $white;
+		}
+		
+		a{
+			&:hover{
+				svg{ fill: $light-gray;}
+			}
+		}
+		
+	}
+	
+	.copyright {
+		font-size:12px;
+		color: white;
+		margin: 0.5rem 0;
+	}
+	
+	/* ---- Medium Width screens and up ---- */
+	@media only screen and (min-width: #{map-get($breakpoints, medium)} ) {
+		
+		#socialnav{
+			justify-content: flex-end;
+		}
+		
+		.copyright{
+			margin-right: 1rem;
+		}
+		
+	}
+	
+	/* ---- Large Width screens and up ---- */
+	@media only screen and (min-width: #{map-get($breakpoints, large)}) {
+		
+	}
+}
+		
